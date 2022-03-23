@@ -1,0 +1,14 @@
+.checkout-section{
+    min-height: 500px ;
+}
+
+.payment-options li a{
+    text-decoration: none;
+    background: #45A747;
+    color: #fff;
+    padding: 10px;
+    margin: 20px 0;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 18px;
+}
