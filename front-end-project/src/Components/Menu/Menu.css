@@ -1,0 +1,203 @@
+
+.details{
+  display: grid;
+  grid-template-columns: 50%  50%   ;
+  grid-template-rows: auto;
+  margin-right: 2% ;
+
+}
+
+
+.nameImg{
+  background-color: #fdfbfb;
+  padding: 0% 2% ;
+  margin: 0% 2%  ;
+  width: 90% ;
+  align-content: center;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+.myim{
+  padding:2% 5% ;
+  margin: 5% ;
+}
+.nameImg img{
+  width:100% ;
+  align-self: center;
+}
+.mealName{
+  margin-left: 5% ;
+  color: #2ecc71;
+  
+}
+.tit{
+  color:#47B07F;
+  margin:3% -1% ;
+}
+
+.Mycards{
+  display: grid;
+  grid-template-columns: auto auto  auto ;
+  grid-template-rows: auto auto ;
+  grid-gap: 10px;
+}
+.dets{
+  width: 15rem ;
+  height:100% ;
+  margin-bottom: 20px;
+}
+
+.MenList{
+  display: grid;
+  grid-template-columns: auto auto auto auto ;
+  grid-template-rows: auto;
+}
+
+.category {
+  position: absolute;
+  background-color:#2ecc71;
+  padding:10px;
+  margin: 0%;
+  border-radius: 0px 35px 35px 0px;
+  border-color: black;
+  color: white;
+}
+.icon {
+  background-color: white;
+  color: #2ecc71;
+  padding: 12px 16px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 50%;
+  border-color: #2ecc71;
+  margin:0px 5px ;
+}
+.icon:hover {
+  background-color: #2ecc71;
+  color: white;
+}
+.txt{
+  text-align: center;
+}
+.tog :active{
+  background-color: #2ecc71;
+  color: white;
+}
+.add:focus{
+  background-color: #47B07F;
+}
+
+.dis{
+  margin: 10%;
+}
+
+.shopimg{
+  width: 30%;
+
+}
+.count{
+  align-content: center;
+  align-self: center;
+  margin-left: 0%;
+  padding-left: 0%;
+  width: fit-content;
+
+}
+.count input{
+  width: 30%;
+}
+.add{
+  width: fit-content;
+}
+.cart{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+.total{
+  margin-left: 5%;
+  text-align: center;
+  padding: 2%;
+}
+.myimg{
+  width: 50% ;
+}
+
+
+@import url(http://fonts.googleapis.com/css?family=Calibri:400,300,700);
+
+body {
+    background-color: #eee;
+    font-family: 'Calibri', sans-serif !important
+}
+
+.mt-100 {
+    margin-top: 100px
+}
+
+.card {
+    margin-bottom: 30px;
+    border: 0;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+    letter-spacing: .5px;
+    border-radius: 8px;
+    -webkit-box-shadow: 1px 5px 24px 0 rgba(68, 102, 242, .05);
+    box-shadow: 1px 5px 24px 0 rgba(68, 102, 242, .05)
+}
+
+.card .card-header {
+    background-color: #fff;
+    border-bottom: none;
+    padding: 24px;
+    border-bottom: 1px solid #f6f7fb;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px
+}
+
+.card-header:first-child {
+    border-radius: calc(.25rem - 1px) calc(.25rem - 1px) 0 0
+}
+
+.card .card-body {
+    padding: 30px;
+    background-color: transparent
+}
+
+.btn-primary,
+.btn-primary.disabled,
+.btn-primary:disabled {
+    background-color: #4466f2 !important;
+    border-color: #4466f2 !important
+}
+
+
+
+
+
+
+@media only screen and (max-width: 1200px){
+  .MenList{
+    grid-template-columns: auto auto auto auto ;
+  }
+}
+@media only screen and (max-width: 1000px) {
+
+  .MenList{
+    grid-template-columns: auto auto auto;
+  }
+  .dets{
+    width: 13rem;
+  }
+}
+
+@media only screen and (max-width: 600px){
+  .MenList{
+    grid-template-columns: auto auto;
+  }
+}
+
+@media only screen and (max-width: 450px){
+  .MenList{
+    grid-template-columns: auto ;
+  }
+}

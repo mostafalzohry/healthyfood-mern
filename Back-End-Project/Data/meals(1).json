@@ -1,0 +1,790 @@
+[
+    {
+    "name": "Egg Salad Avocado Toast",
+    "details":"It's like egg salad and avocado toast had a baby in this 5-minute healthy breakfast.",
+    "Recipeinfo":{
+        "PrepTime":"5 mins",
+        "cookTime":"5 mins",
+        "Servings":"1",
+        "Serving-Size":"1 toast"
+    },
+    "image":"https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F44%2F2019%2F08%2F26232342%2F5872985.jpg",
+    "NutritionInfo":{
+       
+        "fat":" 13.7g",
+        "Cholesterol":"186.5mg",
+        "Sodium":"405.5mg",
+        "TotalCarbohydrate":"17.2g",
+        "Protein":"10.9g",
+        "Potassium":"400.3mg",
+        "calcium" :"79.1mg",
+        "iron ":"1.6mg",
+        "magnesium": "41.5mg",
+        "addedSugar":"1g"
+    },
+    "Ingredients":"avocado, celery, lemon juice, hot sauce, Pinch of salt, hard-boiled eggs, whole-wheat toast",
+    "category":"BreakFast",
+    "price":50,
+    "calories":230
+   },
+   {
+    "name": "Peanut Butter-Banana English Muffin",
+    "details":"Peanut butter and banana are the original power couple. Top a simple toasted English muffin with the duo, then sprinkle everything with a hit of ground cinnamon for a healthy breakfast of champions.",
+    "Recipeinfo":{
+        "PrepTime":"5 mins",
+        "cookTime":"5 mins",
+        "Servings":"1",
+        "Serving-Size":"1 serving"
+    },
+    "image":"https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F44%2F2019%2F08%2F26231106%2F5327207.jpg",
+    "NutritionInfo":{
+        "fat":"9.8g",
+        "Sodium":"293.9mg",
+        "TotalCarbohydrate":"56.8g",
+        "Protein":"10.6g",
+        "Potassium":" 561.7mg",
+        "calcium" :"182.4mg",
+        "iron ":"2.1mg",
+        "magnesium": "78.8mg",
+        "addedSugar":"5g"
+    },
+    "Ingredients":"whole-wheat English toasted muffin , peanut butter, sliced banana, Pinch of ground cinnamon",
+    "category":"BreakFast",
+    "price":35,
+    "calories":344
+
+},
+{
+    "name": "Avocado Egg Salad Sandwiches",
+    "details":"Lighten up classic egg salad by swapping in creamy avocado instead of using mayonnaise. Sandwich it between toasted whole-wheat bread and you've got an easy, packable lunch ready for work or school.",
+    "Recipeinfo":{
+        "PrepTime":"20 mins",
+        "cookTime":"20 mins",
+        "Servings":"2",
+        "Serving-Size":"1 sandwich"
+    },
+    "image":"https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F44%2F2019%2F08%2F26232533%2F5121276.jpg",
+    "NutritionInfo":{
+       
+        "fat":"18.8g",
+        "Cholesterol":"246.2mg",
+        "Sodium":"642.2mg",
+        "TotalCarbohydrate":"30.2g",
+        "Protein":"16.6g",
+        "Potassium":" 546.8mg",
+        "calcium" :"141.3mg",
+        "iron ":" 2.7mg",
+        "magnesium": " 67.6mg",
+        "addedSugar":"3g"
+    },
+    "Ingredients":"avocado, lemon juice, avocado oil, hard-boiled eggs chopped, chopped celery (about 1 stalk), fresh chives, whole-wheat sandwich toasted bread , 2 leaves lettuce ",
+    "category":"BreakFast",
+    "price":30,
+    "calories":351 
+
+},
+{
+    "name": "Banana Protein Muffins",
+    "details":"These healthy banana muffins are packed with protein thanks to ingredients like peanut butter and Greek yogurt, while white whole-wheat flour gives them a fiber boost. Serve them for breakfast or for a grab-and-go snack.",
+    "Recipeinfo":{
+        "PrepTime":"10 mins",
+        "cookTime":"35 mins",
+        "Servings":"12",
+        "Serving-Size":"1 muffin"
+    },
+    "image":"https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F44%2F2020%2F11%2F16%2Fbanana-protein-muffins-1244.jpg",
+    "NutritionInfo":{
+        "fat":"6g",
+        "Cholesterol":"32mg",
+        "Sodium":"194mg",
+        "TotalCarbohydrate":"32g",
+        "Protein":"5g"
+    },
+    "Ingredients":"1 teaspoon ground cinnamon, whole-milk Greek yogurt,  creamy natural peanut butter well stirred, mashed banana , vanilla extract, toasted walnuts",
+    "category":"BreakFast",
+    "price":40,
+    "calories":193
+
+
+},
+{
+    "name": "Spinach & Egg Scramble with Raspberries",
+    "details":"This quick egg scramble with hearty bread is one of the best breakfasts for weight loss. It combines weight-loss power foods, eggs and raspberries, with filling whole-grain toast and nutrient-packed spinach. The protein and fiber help fill you up and the whole meal clocks in at just under 300 calories.",
+    "Recipeinfo":{
+        "PrepTime":"10 mins",
+        "cookTime":"10 mins",
+        "Servings":"1",
+        "Serving-Size":"2 eggs, 1 slice bread & 1/2 cup raspberries"
+    },
+    "image":"https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F44%2F2019%2F08%2F26232310%2F6183602.jpg",
+    "NutritionInfo":{
+        "fat":"15.7g",
+        "Cholesterol":"372mg",
+        "Sodium":"394.2mg",
+        "TotalCarbohydrate":"20.9g",
+        "Protein":"17.8g",
+        "calcium" :"138.8mg",
+        "iron ":"  4.2mg",
+        "magnesium": " 76.1mg"
+    },
+    "Ingredients":"baby spinach, eggs, pepper, salt, whole-grain toasted bread, fresh raspberries",
+    "category":"BreakFast",
+    "price":45,
+    "calories":296 
+
+
+},
+{ 
+    "name": "Sweet Potato Hash Browns",
+    "details":"Sweet potatoes are a colorful, fiber-packed swap for regular potatoes in this healthy hash brown recipe. Take these crispy sweet potato hash browns up a notch by adding jalapeños or herbs. Or, serve them with fried eggs for a complete and satisfying meal.",
+    "Recipeinfo":{
+        "PrepTime":"30 mins",
+        "cookTime":"30 mins",
+        "Servings":"6",
+        "Serving-Size":"1 patty"
+    },
+    "image":"https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F44%2F2018%2F11%2F13%2F5965667.jpg",
+    "NutritionInfo":{
+        "fat":"7.1g",
+        "Sodium":" 208.4mg",
+        "TotalCarbohydrate":"9.3g",
+        "Protein":"1g",
+        "Potassium":" 207.4mg",
+        "calcium" :"18.8mg",
+        "iron ":"  0.4mg",
+        "magnesium": " 12.1mg"
+    },
+    "Ingredients":"sweet potato , chopped shallot, garlic, olive oil, salt",
+    "category":"BreakFast",
+    "price":30,
+    "calories":103 
+
+    
+},
+{
+    "name": "Avocado Egg-in-a-Hole Toasts",
+    "details":"Love avocado toast? Make it even better with this easy and attractive brunch recipe. We use the same concept as a traditional egg-in-a-hole toast, but add avocado for an even more satisfying and deliciously creamy breakfast toast. Don't toss the bread from the hole, it's perfect for dipping into the runny yolk.",
+    "Recipeinfo":{
+        "PrepTime":"15 mins",
+        "cookTime":"25 mins",
+        "Servings":"4",
+        "Serving-Size":"1 toast"
+    },
+    "image":"https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F44%2F2019%2F08%2F26232318%2F5852723.jpg",
+    "NutritionInfo":{
+        "fat":"20.1g",
+        "Cholesterol":"186mg",
+        "Sodium":"347.3mg",
+        "TotalCarbohydrate":"16.7g",
+        "Protein":"10.8g",
+        "Potassium":"385.8mg",
+        "calcium" :"79.8mg",
+        "iron ":"1.9mg",
+        "magnesium": "41.8mg"
+    },
+    "Ingredients":"avocado, whole-wheat sandwich bread, avocado oil, eggs, salt, pepper, salsa",
+    "category":"BreakFast",
+    "price":35,
+    "calories":285 
+
+    
+},
+{
+    "name": "Pumpkin Overnight Oats",
+    "details":"We make these easy vegan overnight oats with whatever nondairy milk we have on hand. It's a great way to use canned pumpkin--plus, we can multiply the recipe to meal-prep healthy breakfasts for the whole week.",
+    "Recipeinfo":{
+        "PrepTime":"10 mins",
+        "cookTime":"25 mins",
+        "Servings":"1",
+        "Serving-Size":"1 jar"
+    },
+    "image":"https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F44%2F2019%2F08%2F27044830%2F5783159.jpg",
+    "NutritionInfo":{
+        "fat":"4g",
+        "Sodium":"350.9mg",
+        "TotalCarbohydrate":"40.8g",
+        "Protein":"5.9g",
+        "Potassium":"290.4mg",
+        "calcium" :"201mg",
+        "iron ":"2.3mg",
+        "magnesium": "54mg"
+    },
+    "Ingredients":"rolled oats, milk, pumpkin puree, maple syrup, vanilla extract, cinnamon, Pinch of salt",
+    "category":"BreakFast",
+    "price":50,
+    "calories":218 
+
+
+},
+{
+    "name": "Spinach & Egg Tacos",
+    "details":"Hard-boiled eggs are combined with spinach, cheese and salsa for a quick, flavorful breakfast. Mashed avocado provides a creamy element while a squeeze of lime juice brings acidity.",
+    "Recipeinfo":{
+        "PrepTime":"5 mins",
+        "cookTime":"10 mins",
+        "Servings":"1",
+        "Serving-Size":"2 tacos"
+    },
+    "image":"https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F44%2F2022%2F01%2F21%2Fegg-and-spinach-tacos.jpg",
+    "NutritionInfo":{
+        "fat":"24g",
+        "Sodium":"658mg",
+        "TotalCarbohydrate":"32g",
+        "Protein":"21g",
+        "Potassium":"564mg"
+    },
+    "Ingredients":"avocado, teaspoon lime juice, Pinch of salt, hard-boiled chopped eggs, warmed tortillas, chopped spinach, shredded Cheddar cheese, salsa",
+    "category":"BreakFast",
+    "price":30,
+    "calories":421 
+
+
+},
+{
+    "name": "Greek Salmon Toast",
+    "details":"Complete with chopped red onion and fresh dill weed, this Greek salmon toast is sure to satisfy.",
+    "Recipeinfo":{
+        "PrepTime":"10 mins",
+        "cookTime":"25 mins",
+        "Servings":"1",
+        "Serving-Size":"1 jar"
+    },
+    "image":"https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F44%2F2019%2F08%2F27044830%2F5783159.jpg",
+    "NutritionInfo":{
+        "fat":"7g",
+        "Cholesterol":"23mg",
+        "Sodium":"383mg",
+        "TotalCarbohydrate":"26g",
+        "Protein":"12g"
+    },
+    "Ingredients":"reduced-fat cream cheese, whole-wheat toasted bread, slices cucumber, pink salmon, chopped red onion, fresh dill weed",
+    "category":"BreakFast",
+    "price":55,
+    "calories":207 
+
+
+},
+{
+    "name": "Stuffed Cabbage Soup",
+    "details":"Like stuffed cabbage? You'll love this easy stuffed cabbage soup. It's got all of the classic flavors of stuffed cabbage without all the fuss of stuffing. Plus, you can make this warming soup ahead of time or freeze it for later for a quick dinner or lunch.",
+    "Recipeinfo":{
+        "PrepTime":"20 mins",
+        "cookTime":"1 hr",
+        "Servings":"8",
+        "Serving-Size":"1 1/2 cups"
+    },
+    "image":"https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F44%2F2020%2F08%2F12%2F8432277.jpg",
+    "NutritionInfo":{
+        "fat":"16.8g",
+        "Cholesterol":"57.8mg",
+        "Sodium":"434mg",
+        "TotalCarbohydrate":"18.1g",
+        "Protein":"19.5g",
+        "Potassium":"694.6mg",
+        "calcium" :"55.8mg",
+        "iron ":"2.9mg",
+        "magnesium": "44.5mg",
+        "addedSugar":"3g"
+    },
+    "Ingredients":"beef, chopped green cabbage, yellow onion, chopped carrots, chopped celery, whole-wheat toast, light brown sugar, paprika, salt, pepper, unsalted chicken broth, medium-grain brown rice, chopped fresh flat-leaf parsley",
+    "category":"Lunch",
+    "price":55,
+    "calories":300 
+
+},
+{
+    "name": "Shrimp & Crab Gumbo",
+    "details":"Browning the flour gives this seafood gumbo recipe a distinctive rich color and flavor.",
+    "Recipeinfo":{
+        "PrepTime":"40 mins",
+        "cookTime":"50 mins",
+        "Servings":"8",
+        "Serving-Size":"1 1/4 cups gumbo and 1/3 cup rice"
+    },
+    "image":"https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F44%2F2018%2F12%2F15%2F6127319.jpg",
+    "NutritionInfo":{
+        "fat":"5g",
+        "Cholesterol":"102.5mg",
+        "Sodium":"510.4mg",
+        "TotalCarbohydrate":"31g",
+        "Protein":"21.9g",
+        "Potassium":"448.3mg",
+        "calcium" :"140.6mg",
+        "iron ":"2.5mg",
+        "magnesium": "51.5mg"
+    },
+    "Ingredients":"dried crushed thyme, pepper, salt, large shrimp, chopped onion, celery, crabmeat, long-grain rice or brown rice, Scallions, hot pepper sauce",
+    "category":"Lunch",
+    "price":60,
+    "calories": 263 
+
+},
+{
+    "name": "Shrimp Jambalaya",
+    "details":"Served over brown rice, this one-bowl Shrimp Jambalaya recipe gets its heat from Cajun seasoning and hot pepper sauce.",
+    "Recipeinfo":{
+        "PrepTime":"30 mins",
+        "cookTime":"45 mins",
+        "Servings":"4",
+        "Serving-Size":"1 1/4 cups jambalaya (includes about 8 shrimp) and 1/3 cup rice"
+    },
+    "image":"https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F44%2F2018%2F06%2F18%2F5492893.jpg",
+    "NutritionInfo":{
+        "fat":"5.3g",
+        "Cholesterol":"120.5mg",
+        "Sodium":"712.3mg",
+        "TotalCarbohydrate":"31.7g",
+        "Protein":"18.3g",
+        "Potassium":"816.4mg",
+        "calcium" :"106.3mg",
+        "iron ":"1.9mg",
+        "magnesium": "79.4mg"
+    },
+    "Ingredients":"medium shrimp, olive oil, Cajun seasoning, chopped green sweet pepper, chopped onion, chopped celery, chopped tomatoes, tomato paste, bottled hot pepper sauce, salt, cooked brown rice,  sliced green onions",
+    "category":"Lunch",
+    "price":70,
+    "calories":245 
+
+},
+{
+    "name": "Skillet Honey-Garlic Chicken Thighs",
+    "details":"This one-skillet honey-garlic chicken recipe is delicious enough for a weekend lunch. It has well- balanced flavors of sweet and sour plus a hit of heat from hot honey. A pat of butter lends a silky texture to the sauce and helps carry the flavors.",
+    "Recipeinfo":{
+        "PrepTime":"25 mins",
+        "cookTime":"40 mins",
+        "Servings":"4",
+        "Serving-Size":"1 chicken thigh & 2 Tbsp. sauce"
+    },
+    "image":"https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F44%2F2022%2F03%2F03%2Fskillet-honey-garlic-chicken-thighs-.jpg",
+    "NutritionInfo":{
+        "fat":"14g",
+        "Cholesterol":"111mg",
+        "Sodium":"390mg",
+        "TotalCarbohydrate":"19g",
+        "Protein":"21g",
+        "Potassium":"301mg",
+        "calcium" :"24mg",
+        "iron ":"1mg",
+        "magnesium": "30mg"
+    },
+    "Ingredients":"chicken thighs, pepper, hot honey, soy sauce, salt, sherry vinegar, cold unsalted butter, thinly sliced fresh chives",
+    "category":"Lunch",
+    "price":65,
+    "calories":282 
+
+},
+{
+    "name": "Cheesy Ground Beef & Cauliflower Casserole",
+    "details":"Ground beef and cauliflower combine to create a hearty weeknight casserole that both kids and adults will love. Serve with tortilla chips and sour cream.",
+    "Recipeinfo":{
+        "PrepTime":"30 mins",
+        "cookTime":"30 mins",
+        "Servings":"6",
+        "Serving-Size":"about 1 cup"
+    },
+    "image":"https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F44%2F2021%2F08%2F16%2Fcheesy-ground-beef-and-cauliflower-casserole.jpg",
+    "NutritionInfo":{
+        "fat":"23g",
+        "Cholesterol":"86mg",
+        "Sodium":"672mg",
+        "TotalCarbohydrate":"11g",
+        "Protein":"26g",
+        "Potassium":"639mg"
+    },
+    "Ingredients":"olive oil, chopped onion, green chopped pepper, beef, cauliflower, chili powder, cumin, salt, tomatoes, shredded extra-sharp Cheddar cheese",
+    "category":"Lunch",
+    "price":60,
+    "calories":351 
+
+    
+},
+{
+    "name": "Skillet Honey-Lemon Chicken Thighs with Potatoes",
+    "details":"Moist chicken thighs, tender potatoes and a bright honey-lemon sauce cook together in this flavorful one-pan dinner. It's tasty enough for company, yet easy enough for a weeknight.",
+    "Recipeinfo":{
+        "PrepTime":"20 mins",
+        "cookTime":"40 mins",
+        "Servings":"4",
+        "Serving-Size":"1 chicken thigh, 1 cup potatoes & 2 Tbsp. sauce"
+    },
+    "image":"https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F44%2F2021%2F06%2F04%2Fhoney-lemon-chicken-thighs-with-potatoes.jpg",
+    "NutritionInfo":{
+        "fat":"23g",
+        "Cholesterol":"140mg",
+        "Sodium":"588mg",
+        "TotalCarbohydrate":"42g",
+        "Protein":"33g",
+        "Potassium":"950mg"
+    },
+    "Ingredients":"olive oil, lemons, chicken thighs, salt, Gold potatoes, dried thyme, dried rosemary, honey, pepper",
+    "category":"Lunch",
+    "price":65,
+    "calories":504 
+
+},
+{
+    "name": "One-Pot Pasta with Tuna",
+    "details":"Use the one-pot pasta cooking method to make this tuna pasta recipe that calls for just 5 ingredients and is ready in just over half an hour. For extra crunch and a tuna noodle casserole feel, sprinkle this speedy pasta dish with toasted whole-wheat panko breadcrumbs.",
+    "Recipeinfo":{
+        "PrepTime":"35 mins",
+        "cookTime":"35 mins",
+        "Servings":"4",
+        "Serving-Size":"Generous 1 cup"
+    },
+    "image":"https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F44%2F2019%2F08%2F26232321%2F5050780.jpg",
+    "NutritionInfo":{
+        "fat":"15g",
+        "Sodium":"666.7mg",
+        "TotalCarbohydrate":"42.2g",
+        "Protein":"21.7g",
+        "Potassium":"387.4mg",
+        "calcium" :"66.5mg",
+        "iron ":"3.8mg",
+        "magnesium": "91.9mg"
+    },
+    "Ingredients":" whole-wheat spaghetti, olives, fresh lemon, salt, pepper, tuna, chopped fresh dill, olive oil",
+    "category":"Lunch",
+    "price":80,
+    "calories":382 
+
+
+},
+{
+    "name": "Crispy Fish Taco Bowls",
+    "details":"The adobo sauce in a can of chipotles lends earthy heat to the crema that tops these bowls. Don't toss out the unused peppers! Freeze them in an airtight container and pull them out to add to sauces, marinades or chili.",
+    "Recipeinfo":{
+        "PrepTime":"20 mins",
+        "cookTime":"20 mins",
+        "Servings":"4",
+        "Serving-Size":"2 cups"
+    },
+    "image":"https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F44%2F2020%2F08%2F06%2Fcrispy-fish-taco-bowls-1.jpeg",
+    "NutritionInfo":{
+        "fat":"25g",
+        "Sodium":"738mg",
+        "TotalCarbohydrate":"42g",
+        "Protein":"20g",
+        "Potassium":"476mg",
+        "calcium" :"48mg",
+        "iron ":"1mg",
+        "magnesium": "63mg"
+    },
+    "Ingredients":"fish, salt, mayonnaise, breadcrumbs, sour cream, packed finely chopped fresh dill, lime juice, pepper, brown rice, shredded cabbage, sliced radishes",
+    "category":"Lunch",
+    "price":75,
+    "calories":478 
+
+
+},
+{
+    
+    "name": "Classic Sesame Noodles with Chicken",
+    "details":"Classic sesame noodles become a healthy meal with lean chicken and tons of veggies in this quick recipe for Asian noodles. Be sure to rinse the spaghetti until it's cold, then give it a good shake in the colander until it's well drained. Are you a spiralizing pro? Swap 5 cups of raw zucchini, carrot or other veggie “noodles” for the cooked pasta.",
+    "Recipeinfo":{
+        "PrepTime":"20 mins",
+        "cookTime":"20 mins",
+        "Servings":"4",
+        "Serving-Size":"1 3/4 cups"
+    },
+    "image":"https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F44%2F2019%2F08%2F26232602%2F3759402.jpg",
+    "NutritionInfo":{
+        "fat":"16.5g",
+        "Sodium":"407.3mg",
+        "TotalCarbohydrate":"53.2g",
+        "Protein":"28.6g",
+        "Potassium":"477.5mg",
+        "calcium" :"125.5mg",
+        "iron ":"4.5mg",
+        "magnesium": "135.1mg"
+    },
+    "Ingredients":"whole-wheat spaghetti, toasted (dark) sesame oil, scallions, ketchup, soy sauce, ginger, chicken, carrots, sliced snap peas, toasted sesame seeds ",
+    "category":"Lunch",
+    "price":65,
+    "calories":460 
+
+},
+{
+     
+    "name": "Beef Pad Thai",
+    "details":"We've bulked up the serving size of beef pad thai by adding in lots of healthy veggies like matchstick carrots, snap peas and scallions. Look for whole-grain brown-rice pad thai noodles to add an additional 3 grams fiber to each serving.",
+    "Recipeinfo":{
+        "PrepTime":"20 mins",
+        "cookTime":"20 mins",
+        "Servings":"4",
+        "Serving-Size":"1 3/4 cups"
+    },
+    "image":"https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F44%2F2019%2F08%2F26232609%2F5694961.jpg",
+    "NutritionInfo":{
+        "fat":"13g",
+        "Sodium":"894.4mg",
+        "TotalCarbohydrate":"65.3g",
+        "Protein":"22.5g",
+        "Potassium":"485.7mg",
+        "calcium" :"44.6mg",
+        "iron ":"3.6mg",
+        "magnesium": "31.4mg"
+    },
+    "Ingredients":"pad thai rice noodles, lean ground beef, peas, carrots, chopped scallions, pad thai sauce, Chopped peanuts and lime wedges for serving",
+    "category":"Lunch",
+    "price":65,
+    "calories":465 
+
+
+},
+{
+    "name": "Veggie Sandwich",
+    "details":"There's no chance of getting the afternoon munchies when you fuel up with this vegan veggie sandwich filled with fiber and healthy fats, plus fruit on the side. It'll keep you energized until dinner. Feel free to swap in your other favorite sandwich vegetables, sprouts or greens.",
+    "Recipeinfo":{
+        "PrepTime":"10 mins",
+        "cookTime":"10 mins",
+        "Servings":"1",
+        "Serving-Size":"1 sandwich & 1 clementine"
+    },
+    "image":"https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F44%2F2019%2F08%2F26232308%2F4548019.jpg",
+    "NutritionInfo":{
+        "fat":" 10.1g",
+        "Sodium":"370.5mg",
+        "TotalCarbohydrate":"48.6g",
+        "Protein":"11.4g",
+        "Potassium":"723.2mg",
+        "calcium" :" 44.3mg",
+        "iron ":"2.4mg",
+        "magnesium": "40.4mg"
+    },
+    "Ingredients":" bread, avocado, hummus, Pinch of salt, Pinch of salt, cucumber, tomato, shredded carrot, peeled clementine",
+    "category":"Dinner",
+    "price":30,
+    "calories":315 
+
+
+},
+{
+    "name": "Cucumber Sandwich",
+    "details":"This creamy, crunchy cucumber sandwich recipe strikes a lovely balance between decadent and light. The cream cheese-yogurt spread complements the crisp refreshing cucumber while the hearty flavor and texture of the whole-wheat bread holds everything together. Removing the crusts makes it more delicate than your average sandwich.",
+    "Recipeinfo":{
+        "PrepTime":"10 mins",
+        "cookTime":"10 mins",
+        "Servings":"1",
+        "Serving-Size":"1 sandwich"
+    },
+    "image":"https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F44%2F2022%2F03%2F01%2Fcucumber-sandwich.jpg",
+    "NutritionInfo":{
+        "fat":"22gg",
+        "Cholesterol":"59mg",
+        "Sodium":"439mg",
+        "TotalCarbohydrate":"29g",
+        "Protein":"12g",
+        "Potassium":"309mg",
+        "calcium" :"174mg",
+        "iron ":"2mg",
+        "magnesium": "56mg"
+    },
+    "Ingredients":"cream cheese, yogurt, sliced fresh chives, chopped fresh dill, pepper, whole-wheat sandwich bread, sliced cucumber",
+    "category":"Dinner",
+    "price":35,
+    "calories":358 
+
+},
+{
+    "name": "Air-Fryer Salmon Cakes",
+    "details":"These air-fried salmon patties are reminiscent of classic salmon croquettes, crispy on the outside and pillowy tender on the inside. Look for canned or jarred salmon that has less than 50 milligrams of sodium per serving, and don't be afraid of varieties that have bones. They're easy to remove.",
+    "Recipeinfo":{
+        "PrepTime":"10 mins",
+        "cookTime":"25 mins",
+        "Servings":"2",
+        "Serving-Size":"2 cakes"
+    },
+    "image":"https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F44%2F2019%2F01%2F24%2F6374514.jpg",
+    "NutritionInfo":{
+        "fat":"26.7g",
+        "Cholesterol":"180.9mg",
+        "Sodium":"384.2mg",
+        "TotalCarbohydrate":"14.7g",
+        "Protein":"51.8g",
+        "Potassium":"680.3mg",
+        "calcium" :"545.9mg",
+        "iron ":"2.7mg",
+        "magnesium": "67.6mg"
+    },
+    "Ingredients":"pink salmon, large egg, whole-wheat panko breadcrumbs, chopped fresh dill, mayonnaise, mustard, pepper, lemon wedges",
+    "category":"Dinner",
+    "price":60,
+    "calories":517 
+
+},
+{
+    "name": "Broccoli & Cauliflower Casserole",
+    "details":"This cheesy, creamy broccoli and cauliflower casserole carries the perfect amount of sauce to enhance the flavors of the veggies without covering them up. A crunchy, buttery topping adds texture to this easy casserole that will be loved by children and adults alike.",
+    "Recipeinfo":{
+        "PrepTime":"20 mins",
+        "cookTime":"45 mins",
+        "Servings":"8",
+        "Serving-Size":"about 3/4 cup"
+    },
+    "image":"https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F44%2F2021%2F04%2F16%2Fbroccoli-and-cauliflower-casserole.jpg",
+    "NutritionInfo":{
+        "fat":"15g",
+        "Cholesterol":"44mg",
+        "Sodium":"319mg",
+        "TotalCarbohydrate":"17g",
+        "Protein":"11g",
+        "Potassium":"451mg"
+    },
+    "Ingredients":"cauliflower, broccoli, butter, milk, cream cheese, garlic powder, onion powder, pepper, salt, Cheddar cheese, breadcrumbs, Parmesan cheese",
+    "category":"Dinner",
+    "price":55,
+    "calories":246
+
+},
+{
+    "name": "Skillet Ravioli Lasagna",
+    "details":"This easy inside-out ravioli lasagna is the ultimate weeknight comfort food--no layering or mixing bowls required. Feel free to swap in ground turkey for the beef. Look for fresh mozzarella balls (also called 'pearls') in the specialty cheese section of your grocery store.",
+    "Recipeinfo":{
+        "PrepTime":"20 mins",
+        "cookTime":"20 mins",
+        "Servings":"6",
+        "Serving-Size":"2 1/4 cups"
+    },
+    "image":"https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F44%2F2019%2F08%2F27045007%2F6691964.jpg",
+    "NutritionInfo":{
+        "fat":"20.1g",
+        "Cholesterol":"127mg",
+        "Sodium":"629.5mg",
+        "TotalCarbohydrate":"33.5g",
+        "Protein":"38g",
+        "Potassium":"264.9mg",
+        "calcium" :"385.6mg",
+        "iron ":"3.9mg",
+        "magnesium": "18.8mg"
+    },
+    "Ingredients":"cheese, beef, garlic powder, salt, pepper, crushed tomatoes, chopped fresh basil, small fresh mozzarella balls",
+    "category":"Dinner",
+    "price":50,
+    "calories":483 
+
+},
+{
+    "name": "Easy Pea & Spinach Carbonara",
+    "details":"Fresh pasta cooks up faster than dried, making it a must-have for fast weeknight dinners like this luscious yet healthy meal. Eggs are the base of the creamy sauce. They don't get fully cooked, so use pasteurized-in-the-shell eggs if you prefer.",
+    "Recipeinfo":{
+        "PrepTime":"20 mins",
+        "cookTime":"20 mins",
+        "Servings":"4",
+        "Serving-Size":"1 cup"
+    },
+    "image":"https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F44%2F2019%2F08%2F26230716%2F6149755.jpg",
+    "NutritionInfo":{
+        "fat":"14.5g",
+        "Cholesterol":"223.4mg",
+        "Sodium":"586.4mg",
+        "TotalCarbohydrate":"54.1g",
+        "Protein":"20.2g",
+        "Potassium":"160mg",
+        "calcium" :"246.1mg",
+        "iron ":"6.1mg",
+        "magnesium": "99.6mg"
+    },
+    "Ingredients":"olive oil, breadcrumbs, Parmesan cheese, chopped fresh parsley, eggs, pepper, salt, package fresh tagliatelle or linguine, spinach, peas ",
+    "category":"Dinner",
+    "price":40,
+    "calories":430 
+
+},
+{
+    "name": "One-Pot Chicken & Broccoli Pasta",
+    "details":"This creamy chicken and broccoli pasta makes for a quick and easy weeknight dinner. We opt for small shells in this recipe, but any other small pasta, like orecchiette, would work, too.",
+    "Recipeinfo":{
+        "PrepTime":"20 mins",
+        "cookTime":"20 mins",
+        "Servings":"4",
+        "Serving-Size":"about 2 cups"
+    },
+    "image":"https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F44%2F2021%2F09%2F02%2Fone-pot-chicken-and-broccoli-pasta.jpg",
+    "NutritionInfo":{
+        "fat":"18g",
+        "Cholesterol":"77mg",
+        "Sodium":"625mg",
+        "TotalCarbohydrate":"52g",
+        "Protein":"44g",
+        "Potassium":"891mg"
+    },
+    "Ingredients":"chicken, small shell pasta, olive oil, sauce, tomato paste, pepper, salt, broccoli, yogurt, Parmesan cheese, chopped fresh dill",
+    "category":"Dinner",
+    "price":85,
+    "calories":530 
+
+
+},
+{
+    "name": "Veggie Grilled Cheese with Tomato Soup",
+    "details":"Adding veggies to a classic sandwich—in this case, broccoli, zucchini and red bell pepper—boosts the nutrient-density of the meal.",
+    "Recipeinfo":{
+        "PrepTime":"15 mins",
+        "cookTime":"20 mins",
+        "Servings":"4",
+        "Serving-Size":"1 sandwich & about 1 cup soup"
+    },
+    "image":"https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F44%2F2021%2F02%2F18%2Fveggie-grilled-cheese-tomato-soup.jpg",
+    "NutritionInfo":{
+        "fat":"21g",
+        "Cholesterol":"51mg",
+        "Sodium":"1075mg",
+        "TotalCarbohydrate":"55g",
+        "Protein":"17g"
+    },
+    "Ingredients":"butter, red bell pepper, zucchini, jalapeño pepper, broccoli, whole-wheat bread, Cheddar cheese, tomato soup",
+    "category":"Dinner",
+    "price":45,
+    "calories":472 
+
+
+},
+{
+    "name": "Shrimp & Broccoli Stir-Fry",
+    "details":"The broccoli in this simple shrimp-and-broccoli stir-fry absorbs the flavors of the sauce, which also coats the shrimp perfectly. The ingredients can be prepped ahead of time and whipped together in about 15 minutes, making this meal ideal for busy weeknights.",
+    "Recipeinfo":{
+        "PrepTime":"15 mins",
+        "cookTime":"15 mins",
+        "Servings":"4",
+        "Serving-Size":"1 1/3 cups stir-fry & 1 cup rice"
+    },
+    "image":"https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F44%2F2021%2F03%2F01%2Fshrimp-broccoli-stir-fry-2000.jpg",
+    "NutritionInfo":{
+        "fat":"13g",
+        "Cholesterol":"143mg",
+        "Sodium":"586mg",
+        "TotalCarbohydrate":"63g",
+        "Protein":"24g"
+    },
+    "Ingredients":"soy sauce, fresh ginger, sesame oil, olive oil, chile-garlic sauce, mirin, cornstarch, broccoli, scallions, shrimp, brown rice ",
+    "category":"Dinner",
+    "price":85,
+    "calories":455 
+
+
+},
+{
+    "name": "Creamy Broccoli Pasta",
+    "details":"If you're looking for a simple weeknight pasta dish, look no further. This vegetarian dinner is done in only 20 minutes and packs plenty of broccoli along with creamy goodness thanks to mascarpone cheese and low-fat Greek yogurt.",
+    "Recipeinfo":{
+        "PrepTime":"15 mins",
+        "cookTime":"20 mins",
+        "Servings":"4",
+        "Serving-Size":"about 1 1/4 cups"
+    },
+    "image":"https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F44%2F2020%2F11%2F17%2Fcreamy-broccoli-pasta-1244.jpg",
+    "NutritionInfo":{
+        "fat":"36g",
+        "Cholesterol":"71mg",
+        "Sodium":"343mg",
+        "TotalCarbohydrate":"51g",
+        "Protein":"16g"
+    },
+    "Ingredients":"cavatappi or rotini, olive oil, sliced onion, chopped broccoli, salt, crushed red pepper, mascarpone cheese, yogurt, garlic powder, Parmesan cheese ",
+    "category":"Dinner",
+    "price":60,
+    "calories":562 
+
+
+}
+]
