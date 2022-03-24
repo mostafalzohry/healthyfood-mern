@@ -1,3 +1,9 @@
+/* .zzz:active{
+  background: red !important;
+} */
+
+
+
 :root {
     --main-bg-color: #009d63;
     --main-text-color: #009d63;
@@ -73,8 +79,8 @@
   }
   
   .list-group-item.active {
-    background-color: transparent;
-    color: var(--main-text-color);
+    background-color: crimson;
+    /* color: var(red); */
     font-weight: bold;
     border: none;
   }

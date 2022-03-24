@@ -1,51 +1,20 @@
-import axios from "axios";
-import { React, useEffect, useLayoutEffect, useRef, useState } from "react";
-import { BrowserRouter, Link, Route, Router } from "react-router-dom";
-import CardsDahboard from "../CardsDahboard/CardsDahboard";
+import { React, useEffect , useRef, useState } from "react";
+import { Route , Link } from 'react-router-dom';
+import UsersTable from "../AdminDashboard/UsersTable/UsersTable";
 import ProductsTable from "../ProductsTable/ProductsTable";
-import "./Dashboard.css";
-import UsersTable from "./UsersTable/UsersTable";
 
-export default function Dashboard() {
-  const toggleRef = useRef();
-  const WrapperRef = useRef();
-  function togglebtn() {
-    WrapperRef.current.classList.toggle("toggled");
-  }
-
-  // use  state
-  const [productsDash, setproductsDash] = useState([]);
-  const [usersDash, setusersDash] = useState([]);
-
-  // use effect
-
-  useEffect(() => {
-    axios
-      .get("http://localhost:4000/foods")
-      .then((res) => {
-        setproductsDash(res.data);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  }, [productsDash]);
-  // ----------------
-  useEffect(() => {
-    axios
-      .get("http://localhost:4000/users/users-all")
-      .then((res) => {
-        console.log(res.data);
-        setusersDash(res.data);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  }, [usersDash]);
-
+export default function AdminNavAndSidebar() {
+    const toggleRef = useRef();
+    const WrapperRef = useRef();
+    function togglebtn() {
+      WrapperRef.current.classList.toggle("toggled");
+    }
+  
   return (
     <>
-      <div className="d-flex" id="wrapper" ref={WrapperRef}>
-     
+
+       <div className="d-flex" id="wrapper" ref={WrapperRef}>
+        {/* Sidebar */}
 
         <div className="bg-white" id="sidebar-wrapper">
           <div className="sidebar-heading text-center py-4 primary-text fs-4 fw-bold text-uppercase border-bottom">
@@ -55,7 +24,7 @@ export default function Dashboard() {
           <div className="list-group list-group-flush my-3">
             <Link
               to="/admin"
-              className=" zzz  list-group-item list-group-item-action bg-success second-text active"
+              className="list-group-item list-group-item-action bg-success second-text active"
             >
               <i className="fas fa-tachometer-alt me-2" />
               Dashboard
@@ -63,7 +32,7 @@ export default function Dashboard() {
 
             <Link
               to="/adminnavandside/products"
-              className=" zzz   list-group-item list-group-item-action bg-transparent second-text fw-bold"
+              className="list-group-item list-group-item-action bg-transparent second-text fw-bold"
             >
               <i className="fas fa-gift me-2" />
               Products
@@ -88,12 +57,13 @@ export default function Dashboard() {
         </div>
         {/* /#sidebar-wrapper */}
 
-        {/* Page Content */}
+
+
         <div id="page-content-wrapper">
 
 
             {/* nav */}
-            {/* <AdminNav/> */}
+           
           <nav className="navbar navbar-expand-lg navbar-light bg-transparent py-4 px-4">
             <div className="d-flex align-items-center">
               <i
@@ -162,58 +132,17 @@ export default function Dashboard() {
 
 
           <div className="container-fluid px-4">
-            <div className="row g-3 my-2">
-
-              {/* card 1 */}
-              <div className="col-md-6">
-                <div className="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded">
-                  <div>
-                    <CardsDahboard
-                      prod={productsDash}
-                      name={"Products"}
-                      prodLogo={
-                        <i
-                          className="fas fa-gift
-           fs-1 primary-text border rounded-full
-            secondary-bg p-3"
-                        />
-                      }
-                    />
-                  </div>
-                </div>
-              </div>
-              {/* card 1 */}
-              {/* card 2 */}
-
-              <div className="col-md-6">
-                <div className="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded">
-                  <div>
-                    <CardsDahboard
-                      prod={usersDash}
-                      name={"Users"}
-                      prodLogo={
-                        <i
-                          className="fas fa-user
-                          fs-1 primary-text border rounded-full
-                            secondary-bg p-3"
-                        />
-                      }
-                    />
-                  </div>
-                </div>
-              </div>
-              {/* card 2 */}
-
-            </div>
+          
 
 
 
             <div className="row my-5">
+            <Route  path="/adminnavandside/products" component={ProductsTable} />
+            <Route  path="/adminnavandside/users" component={UsersTable} />
 
-                        <ProductsTable/>
-                        <UsersTable/>
+                        {/* <ProductsTable  /> */}
+                        {/* <UsersTable users={usersDash} /> */}
 
-            {/* <Route  path="/admin/products" component={ProductsTable} /> */}
 
 
 
@@ -222,5 +151,5 @@ export default function Dashboard() {
         </div>
       </div>
     </>
-  );
+  )
 }

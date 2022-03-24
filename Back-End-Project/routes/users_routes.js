@@ -8,5 +8,9 @@ const router = express.Router()
   router.post('/login', userController.login)
   router.get('/profile', protect , userController.profile)
 
+
+  router.get('/count-users' , userController.countUsers)
+  router.get('/users-all' , userController.allUsers)
+
   module.exports = router
 

@@ -23,7 +23,10 @@ import Loginpage from './Components/regisiter/loginpage';
 import NotFound from './Components/Not-Found/NotFound'
 import Profile from './Components/Profile/profile'; 
 import Dashboard from './Components/Admin/AdminDashboard/Dashboard';
-import CheckOut from './Components/CheckOut/Checkout'
+import CheckOut from './Components/CheckOut/Checkout';
+import AdminNavAndSidebar from './Components/Admin/AdminNav&Sidebar/AdminNavAndSidebar'
+import ProductsTable from "./Components/Admin/ProductsTable/ProductsTable";
+
 function App() {
   return (
     <div className="App">
@@ -48,6 +51,8 @@ function App() {
           <Route exact path="/profile" component={Profile} />
           <Route  exact path="/admin" component={Dashboard} />
           <Route  path="/checkout" component={CheckOut} />  
+          <Route path="/adminnavandside" component={AdminNavAndSidebar} />
+          <Route path="/adminnavandside/products" component={ProductsTable} />
           <Route  exact path="*" component={NotFound} /> 
         </Switch>
         <Footer/>
