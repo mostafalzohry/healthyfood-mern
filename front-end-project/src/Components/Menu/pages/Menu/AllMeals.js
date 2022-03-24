@@ -115,7 +115,7 @@ function AllMeals(){
 
         <>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light bg-light menu">
             <div class="container-fluid gap-2">
                 <div className="col">
                 <input value={q} onChange={(e) => setQ(e.target.value)} class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>

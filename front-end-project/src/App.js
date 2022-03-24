@@ -1,8 +1,6 @@
 import logo from "./logo.svg";
 import "./App.css";
-
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-
 // import 'bootstrap/dist/css/bootstrap.min.css';
 // import Slider from "./Components/Slider";
 import React from 'react';
@@ -34,7 +32,7 @@ function App() {
         <Nav />
         <Switch>
           <Route exact path="/home" component={Home} />
-
+          <Route exact path="/" component={Home} />
           <Route  exact path="/faq" component={Faq} />
           <Route exact  path="/about" component={AboutUs} />
           <Route exact path="/contact" component={ContactUs} />
@@ -42,14 +40,13 @@ function App() {
           <Route exact path= "/Lunch"  component={Lunch} />
           <Route  exact path= "/Dinner" component={Dinner} />
           <Route  exact path= "/shoppinglist" component={ShoppingList} />
-          
+       
           <Route exact path= "/menudetails/:id"  component={MealDetails} />
           <Route exact path ='/allMeals'  component={AllMeals}/>
           <Route exact path="/register"  component={Regisiterpage} />
           <Route exact path="/login"  component={Loginpage} />
           <Route exact path="/profile" component={Profile} />
           <Route  exact path="/admin" component={Dashboard} />
-        
           <Route  path="/checkout" component={CheckOut} />  
           <Route  exact path="*" component={NotFound} /> 
         </Switch>

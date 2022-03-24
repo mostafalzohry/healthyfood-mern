@@ -1,3 +1,12 @@
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
 
 .details{
   display: grid;
@@ -125,11 +134,11 @@
 
 @import url(http://fonts.googleapis.com/css?family=Calibri:400,300,700);
 
-body {
+/* body {
     background-color: #eee;
     font-family: 'Calibri', sans-serif !important
-}
-
+} */
+/* 
 .mt-100 {
     margin-top: 100px
 }
@@ -171,10 +180,6 @@ body {
 }
 
 
-
-
-
-
 @media only screen and (max-width: 1200px){
   .MenList{
     grid-template-columns: auto auto auto auto ;
@@ -200,4 +205,4 @@ body {
   .MenList{
     grid-template-columns: auto ;
   }
-}
+} */
