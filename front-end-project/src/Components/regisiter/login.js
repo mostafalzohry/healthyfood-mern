@@ -16,6 +16,8 @@ import 'react-toastify/dist/ReactToastify.css';
   const [loading, setLoading] = useState(false);
   const { isLoggedIn } = useSelector(state => state.auth);
   const { message } = useSelector(state => state.message);
+  const { user: currentUser } = useSelector((state) => state.auth);
+
   const dispatch = useDispatch();
   
   const validate = Yup.object({
@@ -39,6 +41,10 @@ import 'react-toastify/dist/ReactToastify.css';
         });
   };
   if (isLoggedIn) {
+    if (currentUser.email == "Admin@gmail.com")  {
+      return <Redirect to="/Admin" />;
+
+    }
     return <Redirect to="/profile" />;
   }
   return (

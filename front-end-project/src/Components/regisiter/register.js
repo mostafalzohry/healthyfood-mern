@@ -45,6 +45,8 @@ const Register = (props) => {
       .then(() => {
         setSuccessful(true)
         props.history.push("/login");
+        window.location.reload();
+
       })
       .catch(() => {
         toast.error(message)

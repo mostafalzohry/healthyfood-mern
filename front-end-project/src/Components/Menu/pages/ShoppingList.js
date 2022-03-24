@@ -31,6 +31,7 @@ function ShoppingList(){
     }
 
 
+    const { user: currentUser } = useSelector((state) => state.auth);
 
 const FavMen= useSelector((state)=>{return state.cartreducer.menu})
 let TotalPrice = 0;
@@ -186,7 +187,15 @@ let TotalPrice = 0;
                             <Card.Text>
                                 <div>Total :<span> {TotalPrice} </span> </div>
                             </Card.Text>
-                            <Link to="/checkout/cashOnDelivery" className="btn btn-primary">Checkout Now</Link>                        </Card.Body>
+
+                            {currentUser ? (
+
+                            <Link to="/checkout/cashOnDelivery" className="btn btn-primary">Checkout Now</Link>                   
+                            ) : (
+                             <Link to="/login" className="btn btn-primary"> Checkout Now</Link>
+                            )}
+                             </Card.Body>
+
                         </Card>
                     </div>
                     </div>

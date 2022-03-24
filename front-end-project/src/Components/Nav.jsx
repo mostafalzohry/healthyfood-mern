@@ -120,7 +120,7 @@ const Nav = () =>  {
             <>
                 
             <li className="nav-item">
-              <NavLink to="/profile" class="nav-link">{currentUser.username}</NavLink>
+              <NavLink to="/profile" className="nav-link">{currentUser.username}</NavLink>
             </li>
             <li class="nav-item">
               <NavLink to="/login" className="nav-link" onClick={logOut}>LogOut</NavLink>
