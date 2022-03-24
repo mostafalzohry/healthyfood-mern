@@ -178,7 +178,7 @@ function ShoppingList(){
     const dispatch = useDispatch()
 
     const [Menu,setMenu] = useState([])
-    const [input, setInput] = useState();
+
     let quantity=0;
 
     const handleQuantity = (event) => {
@@ -226,21 +226,31 @@ let TotalPrice = 0;
     }
 
     let [num, setNum]= useState(1);
-    let incNum =()=>{
-        if(num<10)
-        {
-        setNum(Number(num)+1);
-        }
-    };
-    let decNum = () => {
-        if(num>0)
-        {
-        setNum(num - 1);
-        }
-    }
+    // let incNum =()=>{
+    //     if(num<10)
+    //     {
+    //     setNum(Number(num)+1);
+    //     }
+    // };
+    // let decNum = () => {
+    //     if(num>0)
+    //     {
+    //     setNum(num - 1);
+    //     }
+    // }
     let handleChange = (e)=>{
     setNum(e.target.value);
     }
+
+    const [meals, setMeals] = useState([]);
+
+    const onChangeInputValue = (inputValue, id) =>{
+        setMeals(prevMeals => {
+            return [...prevMeals, {id,inputValue}]
+        })
+    }
+
+
     if(filterMenu==0){
         return(<EmptyCart/>)
     }else{
@@ -267,7 +277,13 @@ let TotalPrice = 0;
                                {
                                    
                                 filterMenu.map((men,index)=>{
-                                    TotalPrice =TotalPrice+ men.price * input ;
+                                   let newMeals = meals.filter(meal => meal.id == men._id)
+                                //    console.log(newMeals );
+                                   if(newMeals.length === 0){
+                                        TotalPrice = TotalPrice +  parseInt(men.price) 
+                                   }else{
+                                      TotalPrice = TotalPrice + ( parseInt(men.price)  * newMeals[newMeals.length -1].inputValue );
+                                   }
                                     return(
                                     <>
                                      <Rows img = {men.image}
@@ -275,6 +291,7 @@ let TotalPrice = 0;
                                         price={men.price}
                                         remove={handelMenu}
                                         id={men._id}
+                                        onChangeInputValue={onChangeInputValue}
                                     />
                                     </>
                                     
@@ -315,7 +332,7 @@ let TotalPrice = 0;
                     <div className="panel-footer">
                     <div className="row text-center">
                         <div className="col-xs-11">
-                            <h4 className="text-right">TotalPrice <strong>${TotalPrice}</strong></h4>
+                            <h4 className="text-right">TotalPrice <strong>{TotalPrice}</strong></h4>
 
                         </div>
                     </div>
@@ -327,9 +344,7 @@ let TotalPrice = 0;
                         <Card.Body>
                             <Card.Title className=" M-2 P-2 fw-bold" style={{fontWeight:"bolder" , fontSize:"28px"}}>CARD TOTAL </Card.Title>
                             <Card.Text>
-                                <div>SubTotal :<span>0</span> </div>
-                                <div>Discount : <span>0</span></div>
-                                <div>Total :<span>0</span> </div>
+                                <div>Total :<span> {TotalPrice} </span> </div>
                             </Card.Text>
                             <Link to="/checkout/cashOnDelivery" className="btn btn-primary">Checkout Now</Link>                        </Card.Body>
                         </Card>

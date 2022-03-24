@@ -59,7 +59,12 @@ import '../../Menu/Menu.css'
 function Rows (props){
 
 
-    const [input, setInput] = useState(); 
+    const [input, setInput] = useState(1); 
+
+    const handleInputValue = e => {
+        props.onChangeInputValue(e.target.value, props.id);
+        setInput(e.target.value)
+    }
 
     return(
         <>
@@ -73,7 +78,7 @@ function Rows (props){
                 <td >{props.name}</td>
                 <td>{props.price}</td>
                 <td className="count">
-                <input type="number" id='myinput' defaultValue={1} onChange={event => setInput(event.target.value)} />
+                <input type="number" id='myinput' min="1" value={input} onChange={handleInputValue} />
                 </td>
                 <td>{
                          (input==null)? props.price :
