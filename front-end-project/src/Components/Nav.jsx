@@ -74,25 +74,25 @@ const Nav = () =>  {
 
         
             <li className="nav-item">
-               <NavLink className="nav-link"  to="allMeals" >                     
+               <NavLink className="nav-link"  to='/allMeals' >                     
                Menu
               </NavLink></li>
 
 
             <li className="nav-item">
-              <NavLink className="nav-link" to="about" >
+              <NavLink className="nav-link" to='/about' >
                 About Us
               </NavLink>
             </li>
 
             <li className="nav-item">
-              <NavLink className="nav-link" to="contact" >
+              <NavLink className="nav-link" to='/contact' >
                 Contact Us
               </NavLink>
             </li>
 
             <li className="nav-item">
-              <NavLink className="nav-link" to="faq">
+              <NavLink className="nav-link" to='/faq'>
                 Faq
               </NavLink>
             </li>
@@ -120,10 +120,10 @@ const Nav = () =>  {
             <>
                 
             <li className="nav-item">
-              <NavLink to={"/profile"} class="nav-link">{currentUser.username}</NavLink>
+              <NavLink to="/profile" class="nav-link">{currentUser.username}</NavLink>
             </li>
             <li class="nav-item">
-              <a href="/login" className="nav-link" onClick={logOut}>LogOut</a>
+              <NavLink to="/login" className="nav-link" onClick={logOut}>LogOut</NavLink>
             </li>
             </>
           ) : (
