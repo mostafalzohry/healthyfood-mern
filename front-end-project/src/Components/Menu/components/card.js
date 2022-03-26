@@ -13,7 +13,7 @@ class Card extends React.Component {
         return (
             <>
                 <div className="container">
-                    <div className=" dets card m-1" >
+                    <div className=" dets card m-3" >
                         <div className="dis">
                             <img src={`${this.props.poster}`} className="card-img-top" alt="..." />
                         </div>
