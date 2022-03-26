@@ -1,0 +1,80 @@
+
+.ourchefs{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto;
+    background-color:#e9ffe2;
+    padding: 10% 5% 0% ;
+}
+.ourchefs .desc {
+  background-color: #45A747;
+  color: white;
+  justify-content: center;
+  width: fit-content;
+  padding: 5% ;
+}
+.third{
+  margin-bottom: 30%;
+}
+.thrdText{
+  background-color:white;
+  color: black;
+  justify-content: center;
+  width: 100%;
+  padding: 5% ;
+  height: 100;
+  padding-bottom: 10%;
+  padding-top: 7%;
+}
+.first{
+  height: 100%;
+  width: fit-content;
+}
+.first img {
+  width:100%;
+  height:50%;
+  margin:30% 5% 70% 2%;
+  padding:2%
+}
+
+@media screen and (max-width: 992px) {
+  .ourchefs{
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+  .first{
+    width: 100% ;
+    height: 100%;
+    margin: 0%;
+    padding: 0%;
+  }
+  .third{
+    margin-top: -32%;
+    width: 96%;
+    margin-left: 4%;
+  }
+}
+@media screen and (max-width:600px) 
+ {
+   .ourchefs{
+     grid-template-columns: auto;
+   }
+   .first{
+     width: 100%;
+     height: 100%;
+     padding: 0%;
+   }
+   .second{
+     margin-top: -56%;
+     width: 96%;
+     margin-left: 4%;
+   }
+   .third{
+    margin-top:23%;
+    width: 96%;
+    margin-left: 4%;
+   }
+  
+}

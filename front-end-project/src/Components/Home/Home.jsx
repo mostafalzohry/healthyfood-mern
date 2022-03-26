@@ -4,6 +4,7 @@ import WhatWeDo from './WhatWeDo';
 import Subscribe from './Subscribe';
 import Testimonials from './Testimonials';
 import ScrollToTop from "./ScrollToTop";
+import OurChefs from "./OurChefs";
 
 
 const Home = () => {
@@ -11,8 +12,9 @@ const Home = () => {
         <Fragment>
             <Slider/>
             <WhatWeDo/>
+            <OurChefs/>
             <Testimonials/>
-            <ScrollToTop/>
+             <ScrollToTop/>
         </Fragment>
      );
 }
