@@ -10,7 +10,8 @@ module.exports = {
       NutritionInfo:req.body.NutritionInfo,
       Ingredients:req.body.Ingredients,
       category:req.body.category,
-      price:req.body.price
+      price:req.body.price,
+      calories:req.body.calories
     });
     food.save(food)
     .then(data => {

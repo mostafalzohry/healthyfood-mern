@@ -58,7 +58,7 @@ export default function ProductsTable() {
                 <>
                   <tr key={product._id}>
                     <th scope="row"> {i+1} </th>
-                    <td>{product.image}</td>
+                    <td><img src={`${product.image}`} style={{width:'100px'}} alt="..."/></td>
                     <td>{product.name}</td>
                     <td>{product.category}</td>
                     <td>{product.calories}</td>

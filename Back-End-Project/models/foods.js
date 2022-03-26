@@ -24,8 +24,11 @@ const foodSchema = new Schema({
   category:{
     type: String
   },
+  calories:{
+    type: Number
+  },
   price:{
-    type: String
+    type: Number
   }
 },{versionKey: false})
 
