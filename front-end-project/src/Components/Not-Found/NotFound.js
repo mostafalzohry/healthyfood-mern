@@ -16,7 +16,7 @@ export default function NotFound() {
 
 
 {/* <img src={require("./404.jpg")}  className="img-fluid" /> */}
-{loading ? <Loader/>:
+
         <div className='container mb-4 '> 
           <div className='row'> 
               <div className='col-12'>
@@ -32,6 +32,6 @@ export default function NotFound() {
               </div>
           </div>
         </div>
-}</>
+</>
 )
 }

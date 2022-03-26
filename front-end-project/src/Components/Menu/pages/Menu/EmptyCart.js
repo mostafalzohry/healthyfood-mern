@@ -11,7 +11,6 @@ function EmptyCart(){
     }, 1500);
   },[])
     return (<>
-    {loading ? <Loader/>:
     <div className="container-fluid mt-100">
     <div className="row">
         <div className="col-md-12">
@@ -29,6 +28,6 @@ function EmptyCart(){
         </div>
     </div>
 </div>
-}</>)
+</>)
 }
 export default EmptyCart

@@ -4,14 +4,14 @@ const sendMail = (req, res) => {
     let transporter = nodemailer.createTransport({
         service: "gmail",
         auth: {
-          user: "mkamal49690@gmail.com",
-          pass: ""
+          user: "hfood263@gmail.com",
+          pass: "Hfood2632022#"
         },
     });
 
     transporter.sendMail({
         from: req.body.email, // sender address
-        to:  "mkamal49690@gmail.com",         // list of receivers 
+        to:  "hfood263@gmail.com",         // list of receivers 
              
        subject: req.body.subject, // Subject line
         text: req.body.message, // plain text body

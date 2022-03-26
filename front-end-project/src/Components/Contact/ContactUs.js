@@ -6,6 +6,9 @@ import { ToastContainer, toast } from 'react-toastify';
 import Loader from '../Loader/Loader';
 import { useState,useEffect } from "react";
 import 'react-toastify/dist/ReactToastify.css';
+import * as Yup from 'yup';
+import { ErrorMessage } from 'formik';
+
 
 export default function ContactUs() {
   const[values , setValues] = useState({
@@ -13,14 +16,17 @@ export default function ContactUs() {
     email:"",
     subject:"",
     message:""
-})
-const [loading,setLoading]=useState(false);
-useEffect(()=>{
-  setLoading(true)
-  setTimeout(() => {
-    setLoading(false)
-  }, 1500);
-},[])
+}) 
+
+// const [loading,setLoading]=useState(false);
+// useEffect(()=>{
+//   setLoading(true)
+//   setTimeout(() => {
+//     setLoading(false)
+//   }, 1500);
+// },[])
+
+
 
 
 
@@ -61,7 +67,6 @@ const handleMessage = (e) =>{
 
 
   return (<>
-  {loading ? <Loader/>:
     <div className="contact-us-section">
       <div className="container-fluid p-0">
         <div className="contact-us section ">
@@ -81,18 +86,19 @@ const handleMessage = (e) =>{
       <div className="container xx">
         <h3 className="my-4  text-center "> Contact Information</h3>
 
-        <form onSubmit={handleMessage} id="contact-form" name="contact-form" method="POST">
+        <form onSubmit={handleMessage}         
+ id="contact-form" name="contact-form" method="POST">
 
         <div className="row">
           <div className="col-md-6 col-sm-12">
             {/* <input className="" type="text" placeholder="Name" /> */}
-            <input onChange={(e)=> changeData(e)} value={values.name} type="text" id="name" name="name" class="form-control" placeholder="name"/>
+            <input onChange={(e)=> changeData(e)} value={values.name} type="text" id="name" name="name" class="form-control" placeholder="Name"/>
 
           </div>
           <div className="col-md-6 col-sm-12">
-          {/* <Inputemail /> */}
+          <Inputemail />
             {/* <input className="" type="email" placeholder="Email" /> */}
-            <input onChange={(e)=> changeData(e)} value={values.email} type="text" id="email" name="email" class="form-control" placeholder="email"/>
+            {/* <input onChange={(e)=> changeData(e)} value={values.email} type="text" id="email" name="email" class="form-control" placeholder="email"/> */}
 
           </div>
         </div>
@@ -103,14 +109,14 @@ const handleMessage = (e) =>{
           </div> */}
           <div className="col-md-12 col-sm-12">
             {/* <input className="" type="text" placeholder="Subject" /> */}
-            <input onChange={(e)=> changeData(e)} value={values.subject} type="text" id="subject" name="subject" class="form-control" placeholder="subject"/>
+            <input onChange={(e)=> changeData(e)} value={values.subject} type="text" id="subject" name="subject" class="form-control" placeholder="Subject"/>
 
           </div>
         </div>
 
         <div className="row">
           <div className="col-12">
-          <textarea onChange={(e)=> changeData(e)} value={values.message} type="text" id="message" placeholder="message" name="message" rows="2" class="form-control md-textarea"></textarea>
+          <textarea onChange={(e)=> changeData(e)} value={values.message} type="text" id="message" placeholder="Message" name="message" rows="2" class="form-control md-textarea"></textarea>
           </div>
         </div>
 
@@ -128,7 +134,7 @@ const handleMessage = (e) =>{
       <ToastContainer />
 
     </div>
-}</>
+</>
     
   );
 }
