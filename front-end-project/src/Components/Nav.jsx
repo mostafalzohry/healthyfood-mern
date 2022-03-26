@@ -6,6 +6,8 @@ import "./Home/Home.css";
 
 const Nav = () =>  {
   const { user: currentUser } = useSelector((state) => state.auth);
+  const count = useSelector((state)=>state.cartreducer.menu)
+  console.log(count.length)
   const dispatch = useDispatch();
 
   const logOut = () => {
@@ -108,7 +110,7 @@ const Nav = () =>  {
 
                 <li className="nav-item">
                <NavLink to="/shoppinglist" className="nav-link" > 
-                 <i class="fa-solid fa-cart-plus"></i> Cart
+                 <i class="fa-solid fa-cart-plus"></i> Cart {count.length}
                  </NavLink>
             </li>
 
