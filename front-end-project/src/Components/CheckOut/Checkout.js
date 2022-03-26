@@ -1,17 +1,12 @@
 import "./CheckOut.css";
 import { useState } from "react";
-import { Link, Switch, Route, BrowserRouter } from "react-router-dom";
+import { Link, Switch, Route, BrowserRouter, useParams } from "react-router-dom";
 import CashOnDelivery from "./CashOnDelivery";
 import Paypal from "./Paypal";
 
 const CheckOut = () => {
-  //   const [checked, setChecked] =  useState('paypal');
 
-  //  const changeHandler = e => {
-  //      setChecked(e.target.value)
-  //  }
-
-
+  let {TotalPrice} = useParams();
 
   return (
     <div className="checkout-section container py-3">
@@ -22,7 +17,7 @@ const CheckOut = () => {
         <div className="col-3">
           <ul className="list-unstyled payment-options ">
             <li className="mb-4 mt-2" >
-              <Link to="/checkout/cashOnDelivery">Cash On Delivery</Link>
+              <Link to="/checkout/cashOnDelivery">Cash On Delivery </Link>
             </li>
             <li >
               <Link to="/checkout/paypal">Pay with Paypal</Link>

@@ -3,9 +3,10 @@ import "./App.css";
 
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
+
 // import 'bootstrap/dist/css/bootstrap.min.css';
 // import Slider from "./Components/Slider";
-import React from 'react';
+import React, { useState } from 'react';
 import Nav from "./Components/Nav";
 import ContactUs from "./Components/Contact/ContactUs";
 import Faq from "./Components/FAQ/Faq";
@@ -16,7 +17,7 @@ import BreakFast from './Components/Menu/pages/Menu/BreakFast';
 import Lunch from './Components/Menu/pages/Menu/Launch';
 import Dinner from './Components/Menu/pages/Menu/Dinner';
 // import myStore from './Components/Menu/store/myStore'
-import { Provider } from "react-redux";
+// import { Provider } from "react-redux";
 import ShoppingList from './Components/Menu/pages/ShoppingList'
 import MealDetails from "./Components/Menu/pages/Menu/MealDetail";
 import AllMeals from "./Components/Menu/pages/Menu/AllMeals";
@@ -26,11 +27,17 @@ import NotFound from './Components/Not-Found/NotFound'
 import Profile from './Components/Profile/profile'; 
 import Dashboard from './Components/Admin/AdminDashboard/Dashboard';
 import CheckOut from './Components/CheckOut/Checkout'
+import TotalContext from './store/total-context';
+
+
 function App() {
+
   return (
     <div className="App">
+
       <BrowserRouter>
       {/* <Provider store={myStore}> */}
+      <TotalContext.Provider value={{ totalPrice : 0}}>
         <Nav />
         <Switch>
           <Route exact path="/" component={Home} />
@@ -56,7 +63,9 @@ function App() {
         </Switch>
         <Footer/>
         {/* </Provider> */}
+        </TotalContext.Provider>
       </BrowserRouter>
+
     </div>
   );
 }

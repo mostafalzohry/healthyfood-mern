@@ -1,6 +1,10 @@
-import { useEffect } from "react";
+import { useContext, useEffect } from "react";
+import TotalContext from './../../store/total-context';
 
 const Paypal = () => {
+
+ const ctx = useContext(TotalContext)
+
   useEffect(() => {
     window.paypal.Buttons({
 
@@ -9,7 +13,7 @@ const Paypal = () => {
           return actions.order.create({
             purchase_units: [{
               amount: {
-                value: '100' // Can reference variables or functions. Example: `value: document.getElementById('...').value`
+                value: ctx.totalPrice  // Can reference variables or functions. Example: `value: document.getElementById('...').value`
               }
             }]
           });

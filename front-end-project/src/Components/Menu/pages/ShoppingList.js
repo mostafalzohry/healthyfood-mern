@@ -170,8 +170,12 @@ import { Card } from "react-bootstrap";
 // import { CartProvider, useCart } from "react-use-cart";
 // import totalArr from "../components/TotalArray";
 import { Link } from 'react-router-dom';
+import TotalContext from './../../../store/total-context';
+import { useContext } from 'react';
 
-function ShoppingList(){
+function ShoppingList(props){
+
+    const ctx = useContext(TotalContext)
 
     let total = 0;
 
@@ -189,6 +193,8 @@ function ShoppingList(){
         else{this.quantity = value}
         //console.log(state.quantity)
     }
+
+
 
 
 
@@ -248,7 +254,14 @@ let TotalPrice = 0;
         setMeals(prevMeals => {
             return [...prevMeals, {id,inputValue}]
         })
+
+        //  props.getTotalPrice = () => {
+        //      return TotalPrice;
+        // }
     }
+
+
+
 
 
     if(filterMenu==0){
@@ -280,9 +293,12 @@ let TotalPrice = 0;
                                    let newMeals = meals.filter(meal => meal.id == men._id)
                                 //    console.log(newMeals );
                                    if(newMeals.length === 0){
-                                        TotalPrice = TotalPrice +  parseInt(men.price) 
+                                        TotalPrice = TotalPrice +  parseInt(men.price);
+                                        ctx.totalPrice =  TotalPrice
+                                    
                                    }else{
                                       TotalPrice = TotalPrice + ( parseInt(men.price)  * newMeals[newMeals.length -1].inputValue );
+                                      ctx.totalPrice =  TotalPrice
                                    }
                                     return(
                                     <>
