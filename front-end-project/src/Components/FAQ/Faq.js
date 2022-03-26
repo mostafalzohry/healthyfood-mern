@@ -2,8 +2,18 @@ import React from "react";
 import { Accordion } from "react-bootstrap";
 import "./faq.css";
 import pic from "./img/chicken soup_748886560.jpg";
+import Loader from '../Loader/Loader';
+import { useState,useEffect } from "react";
 export default function Faq() {
-  return (
+  const [loading,setLoading]=useState(false);
+  useEffect(()=>{
+    setLoading(true)
+    setTimeout(() => {
+      setLoading(false)
+    }, 1500);
+  },[])
+  return (<>
+  {loading ? <Loader/>:
     <div className="faq-section">
       <div className="container-fluid frst-bg mb-4  ">
         <div className="row mx-0 py-0 justify-content-center align-items-center fw-bold text-center ">
@@ -154,5 +164,6 @@ export default function Faq() {
         </div>
       </div>
     </div>
+}</>
   );
 }

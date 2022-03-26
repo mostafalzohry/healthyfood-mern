@@ -6,6 +6,8 @@ import { useDispatch , useSelector} from "react-redux";
 import { addToCart } from "../../../../store/actions/cartaction";
 
 
+
+
 function BreakFast(){
     const dispatch = useDispatch()
     const [Menu, setMenue] = useState([])
@@ -38,6 +40,8 @@ function BreakFast(){
     return(
 
         <>
+        
+        <div>
 
         <h3  className='tit p-1'> BreakFast </h3>
           <div className="MenList card-group m-1 p-1">
@@ -71,9 +75,9 @@ function BreakFast(){
           
 
 
-        
+        </div>
 
-        </>
+            </>
     )
 }
 export default BreakFast

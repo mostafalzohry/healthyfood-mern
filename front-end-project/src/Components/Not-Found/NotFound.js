@@ -1,12 +1,22 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
+import Loader from '../Loader/Loader';
+import { useState,useEffect } from "react";
 
 export default function NotFound() {
+  const [loading,setLoading]=useState(false);
+  useEffect(()=>{
+    setLoading(true)
+    setTimeout(() => {
+      setLoading(false)
+    }, 1500);
+  },[])
   return (
     <>
 
 
 {/* <img src={require("./404.jpg")}  className="img-fluid" /> */}
+{loading ? <Loader/>:
         <div className='container mb-4 '> 
           <div className='row'> 
               <div className='col-12'>
@@ -22,7 +32,6 @@ export default function NotFound() {
               </div>
           </div>
         </div>
-
-    </>
-  )
+}</>
+)
 }

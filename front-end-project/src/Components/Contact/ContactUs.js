@@ -1,9 +1,10 @@
 import React from "react";
 import "./contact-us.css";
 import Inputemail from "./InputEmail";
-import {useState} from "react"
 import axios from "axios";
 import { ToastContainer, toast } from 'react-toastify';
+import Loader from '../Loader/Loader';
+import { useState,useEffect } from "react";
 import 'react-toastify/dist/ReactToastify.css';
 
 export default function ContactUs() {
@@ -13,6 +14,15 @@ export default function ContactUs() {
     subject:"",
     message:""
 })
+const [loading,setLoading]=useState(false);
+useEffect(()=>{
+  setLoading(true)
+  setTimeout(() => {
+    setLoading(false)
+  }, 1500);
+},[])
+
+
 
 const changeData = (e) => {
     if(e.target.name === "name"){
@@ -50,7 +60,8 @@ const handleMessage = (e) =>{
 }
 
 
-  return (
+  return (<>
+  {loading ? <Loader/>:
     <div className="contact-us-section">
       <div className="container-fluid p-0">
         <div className="contact-us section ">
@@ -117,6 +128,7 @@ const handleMessage = (e) =>{
       <ToastContainer />
 
     </div>
+}</>
     
   );
 }

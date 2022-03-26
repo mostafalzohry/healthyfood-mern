@@ -3,6 +3,8 @@ import axios from 'axios';
 import Card from "../../components/card";
 import { useDispatch , useSelector} from "react-redux";
  import { addToCart } from "../../../../store/actions/cartaction";
+ 
+
 
 
 function Lunch(){
@@ -37,7 +39,7 @@ function Lunch(){
     return(
 
         <>
-
+      <div>
         <h3  className='tit p-1'> Lunch </h3>
           <div className="MenList card-group m-1 p-1">
               {
@@ -70,9 +72,9 @@ function Lunch(){
           
 
 
-        
+        </div>
 
-        </>
+           </>
     )
 }
 export default Lunch

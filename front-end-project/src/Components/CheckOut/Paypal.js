@@ -1,6 +1,9 @@
 import { useEffect } from "react";
+import Loader from '../Loader/Loader';
+import { useState } from "react";
 
 const Paypal = () => {
+  
   useEffect(() => {
     window.paypal.Buttons({
 
@@ -33,7 +36,7 @@ const Paypal = () => {
       }).render("#paypal-button-container");
   }, []);
 
-  return <div id="paypal-button-container"></div>;
+  return (<><div id="paypal-button-container"></div>;</>)
 };
 
 export default Paypal;

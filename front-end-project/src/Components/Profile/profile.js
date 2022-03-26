@@ -2,8 +2,17 @@ import React from "react";
 import { Redirect } from 'react-router-dom';
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import Loader from '../Loader/Loader';
+import { useState,useEffect } from "react";
 
 const Profile = () => {
+    const [loading,setLoading]=useState(false);
+  useEffect(()=>{
+    setLoading(true)
+    setTimeout(() => {
+      setLoading(false)
+    }, 1500);
+  },[])
   const { user: currentUser } = useSelector((state) => state.auth);
   if (!currentUser) {
     return <Redirect to="/login" />;
@@ -23,6 +32,8 @@ const Profile = () => {
     //   </p> */}
     //    <p>welcome  {currentUser.username} now you can make your orders  <Link to="/allmeals" class="nav-link">products</Link></p>
     // </div>
+    <>
+    {loading ? <Loader/>:
     <div className="container-fluid mt-100">
     <div className="row">
         <div className="col-md-12">
@@ -43,6 +54,7 @@ const Profile = () => {
         </div>
     </div>
 </div>
+}</>
   );
 };
 export default Profile;  

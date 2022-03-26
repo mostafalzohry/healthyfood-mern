@@ -24,8 +24,10 @@ import NotFound from './Components/Not-Found/NotFound'
 import Profile from './Components/Profile/profile'; 
 import Dashboard from './Components/Admin/AdminDashboard/Dashboard';
 import CheckOut from './Components/CheckOut/Checkout';
-import AdminNavAndSidebar from './Components/Admin/AdminNav&Sidebar/AdminNavAndSidebar'
+import AdminNavAndSidebar from './Components/Admin/AdminNav&Sidebar/AdminNavAndSidebar';
 import ProductsTable from "./Components/Admin/ProductsTable/ProductsTable";
+import AddMeal from "./Components/Admin/Meals/AddMeal";
+import EditMeal from "./Components/Admin/Meals/EditMeal";
 
 function App() {
   return (
@@ -53,6 +55,8 @@ function App() {
           <Route  path="/checkout" component={CheckOut} />  
           <Route path="/adminnavandside" component={AdminNavAndSidebar} />
           <Route path="/adminnavandside/products" component={ProductsTable} />
+          <Route exact path="/Meals/add" component={AddMeal}/>
+          <Route exact path="/Meals/edit/:id" component={EditMeal}/>
           <Route  exact path="*" component={NotFound} /> 
         </Switch>
         <Footer/>

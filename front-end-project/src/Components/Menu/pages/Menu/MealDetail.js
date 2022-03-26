@@ -4,10 +4,20 @@ import { useParams } from 'react-router-dom'
 import { useSelector,useDispatch } from 'react-redux'
 // import { addToCart } from "../../store/action";
 import { addToCart } from "../../../../store/actions/cartaction";
+import Loader from '../Loader/Loader';
+
 
 
 
 function MealDetails(){
+
+    const [loading,setLoading]=useState(false);
+  useEffect(()=>{
+    setLoading(true)
+    setTimeout(() => {
+      setLoading(false)
+    }, 1500);
+  },[])
     const params = useParams([])
     const [Menu, setMenu] = useState({})
     const dispatch = useDispatch()
@@ -46,6 +56,8 @@ function MealDetails(){
     return(
         
         <>
+        {loading ? <Loader/>:
+        <div>
         <h1 style={{color:'#47B07F'}} className='m-5 p-2'> Meal Details</h1>
         <div className='details'>
             <div className='nameImg'>
@@ -102,7 +114,9 @@ function MealDetails(){
                
 
         </div>
-        </>
+        </div>
+}</>
+        
         
     )
     

@@ -5,8 +5,17 @@ import CardsDahboard from "../CardsDahboard/CardsDahboard";
 import ProductsTable from "../ProductsTable/ProductsTable";
 import "./Dashboard.css";
 import UsersTable from "./UsersTable/UsersTable";
-
+import Loader from '../Loader/Loader';
 export default function Dashboard() {
+  const [loading,setLoading]=useState(false);
+  useEffect(()=>{
+    setLoading(true)
+    setTimeout(() => {
+      setLoading(false)
+    }, 1500);
+  },[])
+
+  
   const toggleRef = useRef();
   const WrapperRef = useRef();
   function togglebtn() {
@@ -44,8 +53,9 @@ export default function Dashboard() {
 
   return (
     <>
+    {loading ? <Loader/>:
+    
       <div className="d-flex" id="wrapper" ref={WrapperRef}>
-     
 
         <div className="bg-white" id="sidebar-wrapper">
           <div className="sidebar-heading text-center py-4 primary-text fs-4 fw-bold text-uppercase border-bottom">
@@ -221,6 +231,6 @@ export default function Dashboard() {
           </div>
         </div>
       </div>
-    </>
+}</>
   );
 }
