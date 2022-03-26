@@ -5,8 +5,17 @@ import CardsDahboard from "../CardsDahboard/CardsDahboard";
 import ProductsTable from "../ProductsTable/ProductsTable";
 import "./Dashboard.css";
 import UsersTable from "./UsersTable/UsersTable";
-
+import Loader from '../../Loader/Loader';
 export default function Dashboard() {
+  const [loading,setLoading]=useState(false);
+  useEffect(()=>{
+    setLoading(true)
+    setTimeout(() => {
+      setLoading(false)
+    }, 1500);
+  },[])
+
+  
   const toggleRef = useRef();
   const WrapperRef = useRef();
   function togglebtn() {
@@ -44,8 +53,9 @@ export default function Dashboard() {
 
   return (
     <>
+    {loading ? <Loader/>:
+    
       <div className="d-flex" id="wrapper" ref={WrapperRef}>
-     
 
         <div className="bg-white" id="sidebar-wrapper">
           <div className="sidebar-heading text-center py-4 primary-text fs-4 fw-bold text-uppercase border-bottom">
@@ -77,13 +87,13 @@ export default function Dashboard() {
               Users
             </Link>
 
-            <Link
+            {/* <Link
               to="#"
               className="list-group-item list-group-item-action bg-transparent text-danger fw-bold"
             >
               <i className="fas fa-power-off me-2" />
               Logout
-            </Link>
+            </Link> */}
           </div>
         </div>
         {/* /#sidebar-wrapper */}
@@ -119,6 +129,7 @@ export default function Dashboard() {
               className="collapse navbar-collapse"
               id="navbarSupportedContent"
             >
+{/*               
               <ul className="navbar-nav ms-auto mb-2 mb-lg-0 ">
                 <li className="nav-item dropdown">
                   <a
@@ -153,7 +164,7 @@ export default function Dashboard() {
                     </li>
                   </ul>
                 </li>
-              </ul>
+              </ul> */}
             </div>
           </nav>
             {/* nav */}
@@ -221,6 +232,6 @@ export default function Dashboard() {
           </div>
         </div>
       </div>
-    </>
+}</>
   );
 }

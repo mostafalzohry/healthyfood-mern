@@ -5,10 +5,20 @@ import { useDispatch , useSelector} from "react-redux";
  import { addToCart } from "../../../../store/actions/cartaction";
 import ReactPaginate from "react-paginate";
 import '../../styleSearch.css'
+import Loader from '../../../Loader/Loader';
+
 
 
 
 function AllMeals(){
+
+    const [loading,setLoading]=useState(false);
+  useEffect(()=>{
+    setLoading(true)
+    setTimeout(() => {
+      setLoading(false)
+    }, 3000);
+  },[])
 
     const dispatch = useDispatch()
     const [Menu, setMenue] = useState([])
@@ -112,10 +122,10 @@ function AllMeals(){
         }
     }
     return(
-
         <>
-
-<nav class="navbar navbar-expand-lg navbar-light bg-light menu">
+         {loading ? <Loader/>:
+        <div>
+       <nav class="navbar navbar-expand-lg navbar-light bg-light menu">
             <div class="container-fluid gap-2">
                 <div className="col">
                 <input value={q} onChange={(e) => setQ(e.target.value)} class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
@@ -188,8 +198,8 @@ function AllMeals(){
           <br />
 
         
-
-        </>
+</div>
+}</>
     )
 }
 export default AllMeals

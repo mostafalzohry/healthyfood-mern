@@ -45,14 +45,14 @@ export default function AdminNavAndSidebar() {
               <i className="fas fa-solid fa-user me-2" />
               Users
             </Link>
-
+{/* 
             <Link
               to="#"
               className="list-group-item list-group-item-action bg-transparent text-danger fw-bold"
             >
               <i className="fas fa-power-off me-2" />
               Logout
-            </Link>
+            </Link> */}
           </div>
         </div>
         {/* /#sidebar-wrapper */}
@@ -89,7 +89,7 @@ export default function AdminNavAndSidebar() {
               className="collapse navbar-collapse"
               id="navbarSupportedContent"
             >
-              <ul className="navbar-nav ms-auto mb-2 mb-lg-0 ">
+              {/* <ul className="navbar-nav ms-auto mb-2 mb-lg-0 ">
                 <li className="nav-item dropdown">
                   <a
                     className="nav-link dropdown-toggle second-text fw-bold  text-dark"
@@ -123,7 +123,7 @@ export default function AdminNavAndSidebar() {
                     </li>
                   </ul>
                 </li>
-              </ul>
+              </ul> */}
             </div>
           </nav>
             {/* nav */}

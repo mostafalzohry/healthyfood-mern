@@ -1,8 +1,19 @@
 import React from "react";
+import { useState,useEffect } from "react";
 import "./about.css";
 import { Card } from "react-bootstrap";
+import Loader from '../Loader/Loader'
 export default function AboutUs() {
-  return (
+  const [loading,setLoading]=useState(false);
+  useEffect(()=>{
+    setLoading(true)
+    setTimeout(() => {
+      setLoading(false)
+    }, 1500);
+  },[])
+  return (<>
+   {loading ? <Loader/>:
+     <div>
     <div className="About-us-section">
       <div className="container-fluid bg-img mb-4">
         <div className="row justify-content-center align-items-center fw-bold text-center ">
@@ -161,7 +172,10 @@ export default function AboutUs() {
             </div>
           </div>
         </div>
-      </div>
-    </div>
+       </div>
+</div>
+</div>
+}</>
+
   );
 }

@@ -1,7 +1,17 @@
 import { Link } from 'react-router-dom';
+import Loader from '../../../Loader/Loader';
+import { useState,useEffect } from "react";
 
 function EmptyCart(){
+    const [loading,setLoading]=useState(false);
+  useEffect(()=>{
+    setLoading(true)
+    setTimeout(() => {
+      setLoading(false)
+    }, 1500);
+  },[])
     return (<>
+    {loading ? <Loader/>:
     <div className="container-fluid mt-100">
     <div className="row">
         <div className="col-md-12">
@@ -19,6 +29,6 @@ function EmptyCart(){
         </div>
     </div>
 </div>
-    </>)
+}</>)
 }
 export default EmptyCart

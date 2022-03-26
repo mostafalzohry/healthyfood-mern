@@ -2,6 +2,8 @@ import "./CheckOut.css";
 import { useState } from "react";
 import { Link, Switch, Route, BrowserRouter } from "react-router-dom";
 import CashOnDelivery from "./CashOnDelivery";
+import Loader from '../Loader/Loader';
+import {useEffect} from "react";
 import Paypal from "./Paypal";
 
 const CheckOut = () => {
@@ -10,10 +12,18 @@ const CheckOut = () => {
   //  const changeHandler = e => {
   //      setChecked(e.target.value)
   //  }
+  const [loading,setLoading]=useState(false);
+  useEffect(()=>{
+    setLoading(true)
+    setTimeout(() => {
+      setLoading(false)
+    }, 1500);
+  },[])
 
 
 
-  return (
+  return (<>
+  {loading ? <Loader/>:
     <div className="checkout-section container py-3">
       <h2> Choose your preferred payment method </h2>
 
@@ -40,7 +50,7 @@ const CheckOut = () => {
 
       </div>
     </div>
-  );
+}</>);
 };
 
 export default CheckOut;

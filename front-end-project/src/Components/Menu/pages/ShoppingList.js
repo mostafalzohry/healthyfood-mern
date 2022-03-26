@@ -10,8 +10,17 @@ import { Card } from "react-bootstrap";
 // import { CartProvider, useCart } from "react-use-cart";
 // import totalArr from "../components/TotalArray";
 import { Link } from 'react-router-dom';
+import Loader from '../../Loader/Loader'
+
 
 function ShoppingList(){
+    const [loading,setLoading]=useState(false);
+  useEffect(()=>{
+    setLoading(true)
+    setTimeout(() => {
+      setLoading(false)
+    }, 1500);
+  },[])
 
     let total = 0;
 
@@ -97,6 +106,7 @@ let TotalPrice = 0;
     }else{
         return(
             <>
+             {loading ? <Loader/>:
             <>
              <h1 style={{color:'#47B07F'}}> your cart </h1>
                     <>
@@ -201,8 +211,8 @@ let TotalPrice = 0;
                     </div>
                     </>
                     
-            </>
-            </>
+            </>}
+    </>
         )
     }
 
