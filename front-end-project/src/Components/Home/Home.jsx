@@ -12,15 +12,8 @@ import { useState,useEffect } from "react";
 
 
 const Home = () => {
-    const [loading,setLoading]=useState(false);
-  useEffect(()=>{
-    setLoading(true)
-    setTimeout(() => {
-      setLoading(false)
-    }, 1500);
-  },[])
-    return ( <>
-    {loading ? <Loader/>:
+ 
+    return ( 
         <Fragment>
             <Slider/>
             <WhatWeDo/>
@@ -28,7 +21,7 @@ const Home = () => {
             <OurChefs/>
             <ScrollToTop/>
         </Fragment>
-}</>);
-}
+    )};
+
  
 export default Home;

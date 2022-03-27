@@ -124,6 +124,8 @@ function AllMeals(){
     return(
         <>
          {loading ? <Loader/>:
+
+
         <div>
        <nav class="navbar navbar-expand-lg navbar-light bg-light menu">
             <div class="container-fluid gap-2">

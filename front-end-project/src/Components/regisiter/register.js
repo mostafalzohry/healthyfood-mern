@@ -23,7 +23,9 @@ const Register = (props) => {
     username: Yup.string()
       .max(15, 'Must be 15 characters or less')
       .min(5, 'must be more than 5')
-      .matches(/^[A-Z][a-z0-9_-]{3,19}$/, "must start with capital letter")
+      .matches(/^[A-Z]/, "must start with capital letter")
+
+      
       .required('Required'),
     email: Yup.string()
       .email('Email is invalid')

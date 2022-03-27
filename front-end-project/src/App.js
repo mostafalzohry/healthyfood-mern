@@ -3,7 +3,7 @@ import "./App.css";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 // import 'bootstrap/dist/css/bootstrap.min.css';
 // import Slider from "./Components/Slider";
-import React from 'react';
+import React, { useState } from 'react';
 import Nav from "./Components/Nav";
 import ContactUs from "./Components/Contact/ContactUs";
 import Faq from "./Components/FAQ/Faq";
@@ -28,12 +28,15 @@ import AdminNavAndSidebar from './Components/Admin/AdminNav&Sidebar/AdminNavAndS
 import ProductsTable from "./Components/Admin/ProductsTable/ProductsTable";
 import AddMeal from "./Components/Admin/Meals/AddMeal";
 import EditMeal from "./Components/Admin/Meals/EditMeal";
+import TotalContext from './store/total-context';
+
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
       {/* <Provider store={myStore}> */}
+      <TotalContext.Provider value={{ totalPrice : 0}}>
         <Nav />
         <Switch>
           <Route exact path="/home" component={Home} />
@@ -61,6 +64,8 @@ function App() {
         </Switch>
         <Footer/>
         {/* </Provider> */}
+        </TotalContext.Provider>
+
       </BrowserRouter>
     </div>
   );

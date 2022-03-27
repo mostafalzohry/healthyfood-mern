@@ -40,7 +40,7 @@ input[type=number] {
 }
 .tit{
   color:#47B07F;
-  margin:3% -1% ;
+  margin:3% ;
 }
 
 .Mycards{
@@ -96,7 +96,7 @@ input[type=number] {
 }
 
 .dis{
-  margin: 10%;
+  /* margin: 10%; */
 }
 
 .shopimg{
@@ -118,12 +118,13 @@ input[type=number] {
   width: fit-content;
 }
 .cart{
+  min-height: 25rem;
   display: flex;
   flex-direction: row;
-  gap: 20px;
+  /* gap: 20px; */
 }
 .total{
-  margin-left: 5%;
+  /* margin-left: 5%; */
   text-align: center;
   padding: 2%;
 }

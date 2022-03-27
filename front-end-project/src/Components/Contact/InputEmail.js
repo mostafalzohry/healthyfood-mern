@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 export default function Inputemail(props) {
-  const [userData, setUserData] = useState({
+  const [values, setUserData] = useState({
     email: "",
   });
 
@@ -14,7 +14,7 @@ export default function Inputemail(props) {
   const changeData = (e) => {
     if (e.target.name === "email") {
       setUserData({
-        ...userData,
+        ...values,
         email: e.target.value,
       });
       setError({
@@ -22,10 +22,9 @@ export default function Inputemail(props) {
         emailErr:
           e.target.value.length === 0
             ? "email ie required"
-            : e.target.value.length < 5
-            ? "email  is 5 char."
+         
             : !emailregex.test(e.target.value)
-            ? "unvalid unvalid"
+            ? "unvalid Email"
             : null,
       });
     }
@@ -37,7 +36,7 @@ export default function Inputemail(props) {
         type="email"
         className={` ${errors.emailErr ? "border-danger" : ""}`}
         id="exampleInputemail"
-        value={userData.email}
+        value={values.email}
         onChange={(e) => changeData(e)}
         name="email"
       />

@@ -4,15 +4,15 @@ import "./about.css";
 import { Card } from "react-bootstrap";
 import Loader from '../Loader/Loader'
 export default function AboutUs() {
-  const [loading,setLoading]=useState(false);
-  useEffect(()=>{
-    setLoading(true)
-    setTimeout(() => {
-      setLoading(false)
-    }, 1500);
-  },[])
+  // const [loading,setLoading]=useState(false);
+  // useEffect(()=>{
+  //   setLoading(true)
+  //   setTimeout(() => {
+  //     setLoading(false)
+  //   }, 1500);
+  // },[])
   return (<>
-   {loading ? <Loader/>:
+   {/* {loading ? <Loader/>: */}
      <div>
     <div className="About-us-section">
       <div className="container-fluid bg-img mb-4">
@@ -20,7 +20,7 @@ export default function AboutUs() {
           <div className="col-sm-12 col-md-6 mt-5 m-0 p-0">
             <h1 className="text-light about-H  ">ABOUT US</h1>
             <p className="text-light">
-              We are industry-leading organic farm delivering the best products
+              We are industry-leading organic food delivering the best products
               that boost your daily life energy and potential.
             </p>
           </div>
@@ -43,9 +43,11 @@ export default function AboutUs() {
               </div>
 
               <p>
-                Since its foundation, Orange offers best organic fruits for
+                {/* Since its foundation, Orange offers best organic fruits for
                 local residents, fruit markets, and guests of our city. We are
-                dedicated to improving your healthy food standards.
+                dedicated to improving your healthy food standards. */}
+We wake up every day to inspire people to overcome this noisy food world,  to discover their food values, and to live happier, healthier lives
+                
               </p>
             </div>
           </div>
@@ -62,7 +64,7 @@ export default function AboutUs() {
                     <div className="col-sm-3   col-md-3">
                       <div className="card">
                         <div className="card-img">
-                          <img src={require("./imgs/our-farm-1.jpg")} />
+                          <img src={require("./imgs/11.jpg")} />
                         </div>
                         {/* <div className="card-img-overlay">Slide 1</div> */}
                       </div>
@@ -72,7 +74,7 @@ export default function AboutUs() {
                     <div className="col-md-3">
                       <div className="card">
                         <div className="card-img">
-                          <img src={require("./imgs/our-farm-2.jpg")} />
+                          <img src={require("./imgs/33.jpg")} />
                         </div>
                         {/* <div className="card-img-overlay">Slide 2</div> */}
                       </div>
@@ -82,7 +84,7 @@ export default function AboutUs() {
                     <div className="col-sm-3   col-md-3">
                       <div className="card">
                         <div className="card-img">
-                          <img src={require("./imgs/our-farm-3.jpg")} />
+                          <img src={require("./imgs/22.jpg")} />
                         </div>
                         {/* <div className="card-img-overlay">Slide 3</div> */}
                       </div>
@@ -92,7 +94,7 @@ export default function AboutUs() {
                     <div className=" col-sm-3  col-md-3">
                       <div className="card">
                         <div className="card-img">
-                          <img src={require("./imgs/our-farm-4.jpg")} />
+                          <img src={require("./imgs/44.jpg")} />
                         </div>
                         {/* <div className="card-img-overlay">Slide 4</div> */}
                       </div>
@@ -175,7 +177,7 @@ export default function AboutUs() {
        </div>
 </div>
 </div>
-}</>
+</>
 
   );
 }
