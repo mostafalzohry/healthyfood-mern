@@ -24,8 +24,8 @@ const Home = () => {
         <Fragment>
             <Slider/>
             <WhatWeDo/>
-              <OurChefs/>
             <Testimonials/>
+            <OurChefs/>
             <ScrollToTop/>
         </Fragment>
 }</>);
