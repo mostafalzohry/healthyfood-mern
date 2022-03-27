@@ -20,7 +20,7 @@ export default function AboutUs() {
           <div className="col-sm-12 col-md-6 mt-5 m-0 p-0">
             <h1 className="text-light about-H  ">ABOUT US</h1>
             <p className="text-light">
-              We are industry-leading organic farm delivering the best products
+              We are industry-leading organic food delivering the best products
               that boost your daily life energy and potential.
             </p>
           </div>
@@ -43,9 +43,11 @@ export default function AboutUs() {
               </div>
 
               <p>
-                Since its foundation, Orange offers best organic fruits for
+                {/* Since its foundation, Orange offers best organic fruits for
                 local residents, fruit markets, and guests of our city. We are
-                dedicated to improving your healthy food standards.
+                dedicated to improving your healthy food standards. */}
+We wake up every day to inspire people to overcome this noisy food world,  to discover their food values, and to live happier, healthier lives
+                
               </p>
             </div>
           </div>
