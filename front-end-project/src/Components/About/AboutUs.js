@@ -64,7 +64,7 @@ We wake up every day to inspire people to overcome this noisy food world,  to di
                     <div className="col-sm-3   col-md-3">
                       <div className="card">
                         <div className="card-img">
-                          <img src={require("./imgs/our-farm-1.jpg")} />
+                          <img src={require("./imgs/11.jpg")} />
                         </div>
                         {/* <div className="card-img-overlay">Slide 1</div> */}
                       </div>
@@ -74,7 +74,7 @@ We wake up every day to inspire people to overcome this noisy food world,  to di
                     <div className="col-md-3">
                       <div className="card">
                         <div className="card-img">
-                          <img src={require("./imgs/our-farm-2.jpg")} />
+                          <img src={require("./imgs/33.jpg")} />
                         </div>
                         {/* <div className="card-img-overlay">Slide 2</div> */}
                       </div>
@@ -84,7 +84,7 @@ We wake up every day to inspire people to overcome this noisy food world,  to di
                     <div className="col-sm-3   col-md-3">
                       <div className="card">
                         <div className="card-img">
-                          <img src={require("./imgs/our-farm-3.jpg")} />
+                          <img src={require("./imgs/22.jpg")} />
                         </div>
                         {/* <div className="card-img-overlay">Slide 3</div> */}
                       </div>
@@ -94,7 +94,7 @@ We wake up every day to inspire people to overcome this noisy food world,  to di
                     <div className=" col-sm-3  col-md-3">
                       <div className="card">
                         <div className="card-img">
-                          <img src={require("./imgs/our-farm-4.jpg")} />
+                          <img src={require("./imgs/44.jpg")} />
                         </div>
                         {/* <div className="card-img-overlay">Slide 4</div> */}
                       </div>
