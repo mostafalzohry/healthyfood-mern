@@ -4,6 +4,7 @@ require('dotenv').config()
 //2
 const mainRoutes = require('./routes/main_routes')
 const foodRoutes = require('./routes/foods_routes')
+const orderRoutes = require('./routes/orders_routes')
 const { errorHandler } = require('./middleware/errorMiddleware')
 //5
 const mongoose = require('mongoose')
@@ -20,8 +21,10 @@ app.use(express.static('uploadImage'))
 //3
 mainRoutes(app)
 foodRoutes(app)
+orderRoutes(app)
 app.use('/users', require('./routes/users_routes'))
 app.use('/gmail', require('./routes/sendmail_routes'))
+app.use('/order', require('./routes/ordermail_routes'))
 
 app.use(errorHandler)
 
