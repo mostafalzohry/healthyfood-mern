@@ -1,5 +1,8 @@
 import axios from "axios";
+import authHeader from "./authHeader";
+import {useEffect } from "react";
 const API_URL = "http://localhost:4000/users/";
+
 const register = (username, email, password) => {
   return axios.post(API_URL + "register", {
     username,
@@ -23,8 +26,9 @@ const login = (email, password) => {
 const logout = () => {
   localStorage.removeItem("user");
 };
+
 export default {
   register,
   login,
-  logout,
+  logout
 };
