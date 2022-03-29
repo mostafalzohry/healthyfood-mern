@@ -6,6 +6,8 @@ import ProductsTable from "../ProductsTable/ProductsTable";
 import "./Dashboard.css";
 import UsersTable from "./UsersTable/UsersTable";
 import Loader from '../../Loader/Loader';
+import { Redirect } from 'react-router-dom';
+import { useSelector } from "react-redux";
 export default function Dashboard() {
   const [loading,setLoading]=useState(false);
   useEffect(()=>{
@@ -51,10 +53,13 @@ export default function Dashboard() {
       });
   }, [usersDash]);
 
+  const { user: currentUser } = useSelector((state) => state.auth);
+  if (!currentUser || currentUser.email !== "Admin@gmail.com") {
+    return <Redirect to="/" />;
+  }
   return (
     <>
     {loading ? <Loader/>:
-    
       <div className="d-flex" id="wrapper" ref={WrapperRef}>
 
         <div className="bg-white" id="sidebar-wrapper">
