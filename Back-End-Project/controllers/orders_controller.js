@@ -6,7 +6,9 @@ module.exports = {
       username:req.body.username,
       email: req.body.email,
       phone:req.body.phone,
-      orders:req.body.orders
+      location:req.body.location,
+      orders:req.body.orders,
+      total:req.body.total
     });
     order.save(order)
     .then(data => {

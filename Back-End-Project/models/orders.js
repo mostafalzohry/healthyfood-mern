@@ -12,9 +12,15 @@ const orderSchema = new Schema({
   phone:{
     type: String
   },
+  location:{
+    type: String
+  },
   orders:{
     type: Array
-  }
+  },
+  total:{
+    type: Number
+  },
 },{versionKey: false})
 
 const Order = mongoose.model('Orders', orderSchema)

@@ -92,5 +92,52 @@ const asyncHandler = require('express-async-handler')
     });
   })
 
+  const Delete = asyncHandler(async(req, res) => {
+    const id = req.params.id;
+    User.findByIdAndRemove(id)
+      .then(data => {
+        if (!data) {
+          res.status(404).send({message: `Cannot User with id=${id}. Maybe User was not found!`});
+        } else {
+          res.send({
+            message: "User was deleted successfully!"
+          });
+        }
+      })
+      .catch(err => {
+        res.status(500).send({message: "Could not delete User with id=" + id});
+      });
+  })
 
-  module.exports = {registration , login , profile , allUsers , countUsers}
+  const findOne = asyncHandler(async(req, res) => {
+    const id = req.params.id;
+    User.findById(id)
+    .then(data => {
+      if (!data)
+        res.status(404).send({ message: "Not found Tutorial with id " + id });
+      else res.send(data);
+    })
+    .catch(err => {
+      res.status(500).send({ message: "Error retrieving User with id=" + id });
+    });
+  })
+
+  const update = asyncHandler(async(req, res) =>{
+    if (!req.body) {
+      return res.status(400).send({message: "Data to update can not be empty!"});
+    }
+    const id = req.params.id;
+    User.findByIdAndUpdate(id, req.body, { useFindAndModify: false })
+      .then(data => {
+        if (!data) {
+          res.status(404).send({
+            message: `Cannot update Tutorial with id=${id}. Maybe user was not found!`
+          });
+        } else res.send({ message: "user was updated successfully." });
+      })
+      .catch(err => {
+        res.status(500).send({message: "Error updating user with id=" + id});
+      });
+  })
+
+  module.exports = {registration , login , profile , allUsers , countUsers , Delete , findOne , update}

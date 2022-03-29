@@ -17,10 +17,13 @@ const login = (email, password) => {
       password,
     })
     .then((response) => {
-      if (response.data.token) {
-        localStorage.setItem("user", JSON.stringify(response.data));
+      if (response.data && response.data.token) {
+        axios.get(API_URL + "profile", { headers: { Authorization: 'Bearer ' + response.data.token } })
+        .then((response) => {
+          localStorage.setItem("user", JSON.stringify(response.data));
+        })
       }
-      return response.data;
+      return response.data
     });
 };
 const logout = () => {

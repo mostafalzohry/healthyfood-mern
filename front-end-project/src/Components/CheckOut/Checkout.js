@@ -3,11 +3,16 @@ import { useState } from "react";
 import { Link, Switch, Route, BrowserRouter, useParams } from "react-router-dom";
 import CashOnDelivery from "./CashOnDelivery";
 import Paypal from "./Paypal";
+import { Redirect } from 'react-router-dom';
+import { useSelector } from "react-redux";
 
 const CheckOut = () => {
 
   let { TotalPrice } = useParams();
-
+  const { user: currentUser } = useSelector((state) => state.auth);
+  if (!currentUser) {
+    return <Redirect to="/login" />;
+  }
   return (
     <div className="checkout-section container py-3">
       <h2> Choose your preferred payment method </h2>
