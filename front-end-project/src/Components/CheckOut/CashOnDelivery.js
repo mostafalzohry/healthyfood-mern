@@ -15,8 +15,9 @@ const CashOnDelivery = () => {
     const FavMen = useSelector((state) => { return state.cartreducer.menu })
     console.log(FavMen)
     var email = currentUser.email;
+    var message = `you have just purchased products from our website. Wait for us to contact you and send the product as soon as possible  , I have bought meals for value = ${ctx.totalPrice}`
     const handleMessage = () => {
-        axios.post('http://localhost:4000/order/ordermail',{email})
+        axios.post('http://localhost:4000/order/ordermail',{email , message})
         .then(()=>{
             toast.success("We Receive Your Order")
         })
