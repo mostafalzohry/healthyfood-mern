@@ -21,7 +21,7 @@ const orderSchema = new Schema({
   total:{
     type: Number
   },
-},{versionKey: false})
+},{timestamps: true})
 
 const Order = mongoose.model('Orders', orderSchema)
 

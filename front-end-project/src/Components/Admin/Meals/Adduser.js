@@ -74,6 +74,7 @@ const Adduser = (props) => {
           onSubmit={handleRegister}
         >
           {formik => (
+            <div className="container">
             <div className="adduser">
               <h1 className="my-4 font-weight-bold .display-4">Add user</h1>
               <Form>
@@ -85,6 +86,7 @@ const Adduser = (props) => {
                 <button className="btn btn-success mt-3 me-3 btnn" type="submit" disabled={!formik.isValid}>Add user</button>
                 {/* <button className="btn btn-danger mt-3 " type="reset">Reset</button> */}
               </Form>
+            </div>
             </div>
           )}
         </Formik>

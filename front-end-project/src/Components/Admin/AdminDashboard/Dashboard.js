@@ -5,6 +5,7 @@ import CardsDahboard from "../CardsDahboard/CardsDahboard";
 import ProductsTable from "../ProductsTable/ProductsTable";
 import "./Dashboard.css";
 import UsersTable from "./UsersTable/UsersTable";
+import OrdersTable from "../Orderstable/Orderstable"
 import Loader from '../../Loader/Loader';
 import { Redirect } from 'react-router-dom';
 import { useSelector } from "react-redux";
@@ -27,6 +28,10 @@ export default function Dashboard() {
   // use  state
   const [productsDash, setproductsDash] = useState([]);
   const [usersDash, setusersDash] = useState([]);
+  const [ordersDash, setordersDash] = useState([]);
+ 
+
+
 
   // use effect
 
@@ -40,7 +45,7 @@ export default function Dashboard() {
         console.log(err);
       });
   }, [productsDash]);
-  // ----------------
+  // ---------------------------------------
   useEffect(() => {
     axios
       .get("http://localhost:4000/users/users-all")
@@ -52,6 +57,33 @@ export default function Dashboard() {
         console.log(err);
       });
   }, [usersDash]);
+  // ---------------------------------------
+
+  useEffect(() => {
+    axios
+      .get("http://localhost:4000/orders")
+      .then((res) => {
+        setordersDash(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, [ordersDash]);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   const { user: currentUser } = useSelector((state) => state.auth);
   if (!currentUser || currentUser.email !== "Admin@gmail.com") {
@@ -91,7 +123,15 @@ export default function Dashboard() {
               <i className="fas fa-solid fa-user me-2" />
               Users
             </Link>
+             
 
+            <Link
+              to="/adminnavandside/orders"
+              className="list-group-item list-group-item-action bg-transparent second-text fw-bold"
+            >
+              <i className="fas fa-solid fa-user me-2" />
+              orders
+            </Link>
             {/* <Link
               to="#"
               className="list-group-item list-group-item-action bg-transparent text-danger fw-bold"
@@ -181,7 +221,7 @@ export default function Dashboard() {
             <div className="row g-3 my-2">
 
               {/* card 1 */}
-              <div className="col-md-6">
+              <div className="col-md-4">
                 <div className="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded">
                   <div>
                     <CardsDahboard
@@ -201,7 +241,7 @@ export default function Dashboard() {
               {/* card 1 */}
               {/* card 2 */}
 
-              <div className="col-md-6">
+              <div className="col-md-4">
                 <div className="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded">
                   <div>
                     <CardsDahboard
@@ -219,6 +259,27 @@ export default function Dashboard() {
                 </div>
               </div>
               {/* card 2 */}
+              <div className="col-md-4">
+                <div className="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded">
+                  <div>
+                    <CardsDahboard
+                      prod={ordersDash}
+                      name={"orders"}
+                      prodLogo={
+                        <i
+                        
+                        // <FontAwesomeIcon icon="fa-solid fa-person-carry-box" />
+                        // <i class="fa-solid fa-person-carry-box"></i>
+                        className="fas fa-user
+                        fs-1 primary-text border rounded-full
+                          secondary-bg p-3"
+                        />
+                      }
+                    />
+                  </div>
+                </div>
+              </div>
+              {/* card 3 */}
 
             </div>
 
@@ -228,7 +289,7 @@ export default function Dashboard() {
 
                         <ProductsTable/>
                         <UsersTable/>
-
+                        {/* <OrdersTable/> */}
             {/* <Route  path="/admin/products" component={ProductsTable} /> */}
 
 
