@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+
+.adduser {
+ text-align: center;
+} 
+
+  .adduser label {
+  font-size: 1rem;
+}
+
+.adduser input.form-control, input.form-control:focus {
+  background: #F0F0FF;
+}
+
+.adduser .error {
+  position: absolute;
+  color: blue;
+  font-size: 1rem;
+} 
+
+.adduser .errorme {
+   color: blue;
+}
+
+
