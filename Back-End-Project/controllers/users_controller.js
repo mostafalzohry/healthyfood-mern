@@ -4,7 +4,7 @@ const jwt = require('jsonwebtoken')
 const asyncHandler = require('express-async-handler')
 
   const registration = asyncHandler(async(req, res)=>{
-    const { username, email, password } = req.body
+    const { username, email, password , isAdmin } = req.body
     if (!username || !email || !password) {
       res.status(400)
       throw new Error('Please add all fields')
@@ -23,6 +23,7 @@ const asyncHandler = require('express-async-handler')
       username,
       email,
       password: hashedPassword,
+      isAdmin
     })
 
     if (user) {
@@ -30,6 +31,7 @@ const asyncHandler = require('express-async-handler')
         _id: user.id,
         username: user.username,
         email: user.email,
+        isAdmin:user.isAdmin,
         token: generateToken(user._id),
       })
     } else {
@@ -48,6 +50,7 @@ const asyncHandler = require('express-async-handler')
         _id: user.id,
         username: user.username,
         email: user.email,
+        isAdmin:user.isAdmin,
         token: generateToken(user._id),
       })
     } else {

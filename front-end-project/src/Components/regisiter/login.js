@@ -41,9 +41,8 @@ import 'react-toastify/dist/ReactToastify.css';
         });
   };
   if (isLoggedIn) {
-    if (currentUser.email == "Admin@gmail.com")  {
+    if (currentUser.isAdmin === true) {
       return <Redirect to="/Admin" />;
-
     }
     return <Redirect to="/profile" />;
   }

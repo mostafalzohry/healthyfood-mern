@@ -54,7 +54,7 @@ export default function Dashboard() {
   }, [usersDash]);
 
   const { user: currentUser } = useSelector((state) => state.auth);
-  if (!currentUser || currentUser.email !== "Admin@gmail.com") {
+  if (!currentUser || currentUser.isAdmin !== true) {
     return <Redirect to="/" />;
   }
   return (
