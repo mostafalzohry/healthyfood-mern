@@ -34,13 +34,16 @@ import axios from "axios";
 import {useEffect } from "react";
 const API_URL = "http://localhost:4000/users/";
 
-const register = (username, email, password) => {
+const register = (username, email, password ,isAdmin) => {
   return axios.post(API_URL + "register", {
     username,
     email,
     password,
+    isAdmin
   });
 };
+
+
 const login = (email, password) => {
   return axios
     .post(API_URL + "login", {
@@ -57,6 +60,7 @@ const login = (email, password) => {
       return response.data
     });
 };
+
 const logout = () => {
   localStorage.removeItem("user");
 };
