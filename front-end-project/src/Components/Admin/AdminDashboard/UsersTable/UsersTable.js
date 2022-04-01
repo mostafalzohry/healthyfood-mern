@@ -40,6 +40,7 @@ export default function UsersTable() {
                       </th>
                       <th scope="col">User Name  </th>
                       <th scope="col">Email</th>
+                      <th scope="col">is Admin</th>
                       <th scope="col">CreatedAt</th>
                     </tr>
                   </thead>
@@ -52,6 +53,7 @@ export default function UsersTable() {
                             <th scope="row">  {i+1} </th>
                             <td> {user.username}</td>
                             <td>{user.email}</td>
+                            <td>{user.isAdmin}</td>
                             <td>{user.createdAt}</td>
                             {/* <td><Link class="btn btn-success" to={`/Meals/edit/${user._id}`}>Edit</Link></td> */}
                     <td><Link class="btn btn-danger" onClick={()=>deleteUser(user._id)}>Delete</Link></td>

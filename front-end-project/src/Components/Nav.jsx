@@ -101,6 +101,8 @@ const Nav = () =>  {
               </NavLink>
             </li>
 
+            
+
             {/* <li className="nav-item">
             <Link to="/shoppinglist" className="nav-link" > Shopping cart  </Link>
             </li> */}

@@ -49,7 +49,7 @@ function App() {
           <Route exact path= "/Lunch"  component={Lunch} />
           <Route  exact path= "/Dinner" component={Dinner} />
           <Route  exact path= "/shoppinglist" component={ShoppingList} />
-       
+\
           <Route exact path= "/menudetails/:id"  component={MealDetails} />
           <Route exact path ='/allMeals'  component={AllMeals}/>
           <Route exact path="/register"  component={Regisiterpage} />
