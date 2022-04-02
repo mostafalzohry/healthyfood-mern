@@ -51,7 +51,7 @@ export default function AdminNavAndSidebar() {
               to="/adminnavandside/orders"
               className="list-group-item list-group-item-action bg-transparent second-text fw-bold"
             >
-              <i className="fas fa-solid fa-user me-2" />
+              <i className="fas fa-solid fa-truck me-2" />
               orders
             </Link>
 {/* 

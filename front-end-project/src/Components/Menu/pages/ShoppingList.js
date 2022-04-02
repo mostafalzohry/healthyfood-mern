@@ -45,7 +45,6 @@ function ShoppingList(props) {
         if (value < 0)
             return;
         else { this.quantity = value }
-        //console.log(state.quantity)
     }
     
     const { user: currentUser } = useSelector((state) => state.auth);
@@ -87,18 +86,7 @@ function ShoppingList(props) {
     }
 
     let [num, setNum] = useState(1);
-    // let incNum =()=>{
-    //     if(num<10)
-    //     {
-    //     setNum(Number(num)+1);
-    //     }
-    // };
-    // let decNum = () => {
-    //     if(num>0)
-    //     {
-    //     setNum(num - 1);
-    //     }
-    // }
+ 
     let handleChange = (e) => {
         setNum(e.target.value);
     }
@@ -119,7 +107,9 @@ function ShoppingList(props) {
 
 
 
-    if (filterMenu == 0) {
+
+
+    if (filterMenu == 0  ) {
         return (<EmptyCart />)
     } else {
         return (
@@ -213,7 +203,7 @@ function ShoppingList(props) {
                                         </Card.Text>
                                         {currentUser ? (
 
-                                            <Link to="/checkout/cashOnDelivery" className="btn btn-primary">Checkout Now</Link>
+                                            <Link to="/checkout/cashOnDelivery"   className="btn btn-primary">Checkout Now</Link>
                                         ) : (
                                             <Link to="/login" className="btn btn-primary"> Checkout Now</Link>
                                         )}                        </Card.Body>

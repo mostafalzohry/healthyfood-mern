@@ -64,14 +64,14 @@ const CashOnDelivery = () => {
     var email = currentUser.email;
     var username = currentUser.username;
     var total = ctx.totalPrice;
-    var message = `you have just purchased products from our website. Wait for us to contact you and send the product as soon as possible and you have bought meals for value = ${ctx.totalPrice}`
+    var message = `you have just purchased products from our website. Wait for us to contact you and send the product as soon as possible and you have bought meals for value = ${ctx.totalPrice}  `
     var orders = mealsCtx.meals;
     // var id = currentUser.id 
 
 
     const handleMessage = (e) => {
         e.preventDefault();
-        axios.post('http://localhost:4000/order/ordermail', { email, message })
+        axios.post('http://localhost:4000/order/ordermail', { email, message , orders})
             .then(() => {
                 toast.success("We Receive Your Order")
             })

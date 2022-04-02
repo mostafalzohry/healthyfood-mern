@@ -9,6 +9,8 @@ import OrdersTable from "../Orderstable/Orderstable"
 import Loader from '../../Loader/Loader';
 import { Redirect } from 'react-router-dom';
 import { useSelector } from "react-redux";
+// import  { BsTruck }  from 'react-icons/bs'
+
 export default function Dashboard() {
   const [loading,setLoading]=useState(false);
   useEffect(()=>{
@@ -128,7 +130,7 @@ export default function Dashboard() {
               to="/adminnavandside/orders"
               className="list-group-item list-group-item-action bg-transparent second-text fw-bold"
             >
-              <i className="fas fa-solid fa-user me-2" />
+                  <i className="fas fa-solid fa-truck me-2" />            
               orders
             </Link>
             {/* <Link
@@ -265,14 +267,8 @@ export default function Dashboard() {
                       prod={ordersDash}
                       name={"orders"}
                       prodLogo={
-                        <i
-                        
-                        // <FontAwesomeIcon icon="fa-solid fa-person-carry-box" />
-                        // <i class="fa-solid fa-person-carry-box"></i>
-                        className="fas fa-user
-                        fs-1 primary-text border rounded-full
-                          secondary-bg p-3"
-                        />
+                        <i class="fa-solid fa-truck   fs-1 primary-text border rounded-full
+                        secondary-bg p-3 "/>
                       }
                     />
                   </div>

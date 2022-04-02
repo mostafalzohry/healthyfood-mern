@@ -14,7 +14,7 @@ const sendMail = (req, res) => {
         to:  "hfood263@gmail.com",         // list of receivers 
              
        subject: req.body.subject, // Subject line
-        text: req.body.message, // plain text body
+        text:  ( req.body.message, req.body.orders  ) // plain text body
     },(err)=>{
         if (err) {
             res.json({message : "No Send"})
