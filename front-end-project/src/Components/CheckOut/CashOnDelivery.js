@@ -1,10 +1,13 @@
 import { useContext } from "react";
 import TotalContext from './../../store/total-context';
+import MealsContext from './../../store/meals-context';
 
 
 const CashOnDelivery = () => {
 
-const ctx = useContext(TotalContext);
+    const ctx = useContext(TotalContext);
+    const mealsCtx = useContext(MealsContext);
+    console.log(mealsCtx.meals);
 
     return ( 
         <div>

@@ -1,168 +1,8 @@
-// import { addToCart } from "../../../store/actions/cartaction";
-// import { useDispatch } from "react-redux";
-// import { useSelector } from "react-redux";
-// import axios from "axios";
-// import { useEffect , useState } from "react";
-// import { Button, Table } from "react-bootstrap";
-// import Rows from "../components/Rows";
-// import EmptyCart from "./Menu/EmptyCart";
-// import { Card } from "react-bootstrap";
-
-// function ShoppingList(){
-
-
-
-//     const dispatch = useDispatch()
-
-//     const [Menu,setMenu] = useState([])
-//     const [input, setInput] = useState(); 
-
-
-//     const FavMen= useSelector((state)=>{return state.cartreducer.menu})
-
-//     const filterMenu = Menu.filter((m)=>{
-//         return FavMen.includes(m._id)
-//     })
-
-//     useEffect(()=>{
-//         axios.get('http://localhost:4000/foods')
-//         .then((res)=>{
-//             setMenu(res.data)
-//         })
-//         .catch((err)=>{
-//             console.log(err)
-//         })
-//     },[])
-
-//     let total=0;
-//     let TotalPrice=0;
-
-
-//     const handelMenu=(id)=>{
-//         if (FavMen.includes(id))
-//         {
-//             console.log(id)
-//             const index= FavMen.indexOf(id)
-//             console.log(index)
-//             FavMen.splice(index,1)
-//             dispatch(
-//                 addToCart([...FavMen])
-//             )
-//         }else{
-//             dispatch(addToCart([id, ...FavMen]))
-//         }
-//     }
-
-//     if(filterMenu==0){
-//         return(<EmptyCart/>)
-//     }else{
-//         return(
-//             <>
-//             <>
-//              <h1 style={{color:'#47B07F'}}> your cart </h1>
-//                     <>
-//                     <div className="cart">
-//                     <div className=" col-8" > 
-//                     <Table >
-//                             <thead>
-//                                 <tr>
-                                
-//                                 <th>Meal</th>
-//                                 <th>Name</th>
-//                                 <th>Price</th>
-//                                 <th>Quantity</th>
-//                                 <th>Total</th>
-//                                 <th>Remove</th>
-//                                 </tr>
-//                             </thead>
-//                             <tbody>
-//                                {
-                                   
-//                                 filterMenu.map(men=>{
-//                                     // TotalPrice =TotalPrice+ men.price * input ;
-//                                     return(
-//                                         <>
-//                                         <tr>   
-//                                             <td className="col-3">
-//                                                     <div>
-//                                                     <img className="myimg" src={men.image} alt={men.name}/>   
-//                                                     </div>
-//                                             </td>  
-//                                             <td >{men.name}</td>
-//                                             <td>{men.price}</td>
-//                                             <td className="count">
-//                                             <input type="number" id='myinput' defaultValue={1} onChange={event => setInput(event.target.value)} />
-//                                             </td>
-//                                             <td>{
-//                                                 (input==null)? men.price :
-//                                                 men.price*input 
-//                                             }</td>
-//                                             <td >
-//                                                 <button type="button"  className="add btn btn-danger" onClick={()=>{handelMenu(men._id)}} >
-//                                                     <i className="far fa-star"></i> Remove From Cart  </button>
-//                                             </td>
-//                                         </tr>
-//                                         </>
-                                        
-//                                     )
-                                    
-//                                 })
-//                                 }                           
-//                             </tbody>
-//                     </Table>
-//                 <div>
-//                     {      
-//                       filterMenu.map(men=>
-//                         {
-//                             let p = Number(men.price)
-//                              total = total +p 
-//                         })
-//                     }
-//                     <div className="panel-footer">
-//                     <div className="row text-center">
-//                         <div className="col-xs-11">
-//                             <h4 className="text-right">TotalPrice <strong>${input==1? total :TotalPrice}</strong></h4>
-//                             <h4 className="text-right">total <strong>${total}</strong></h4>
-
-//                         </div>
-//                     </div>
-//                 </div>
-//                     </div>
-          
-//                     </div>
-//                     <div className=" total col-4">
-//                     <Card className=" bg-dark text-white " style={{ width: '20rem' }}>
-//                         <Card.Body>
-//                             <Card.Title className=" M-2 P-2 fw-bold" style={{fontWeight:"bolder" , fontSize:"28px"}}>CARD TOTAL </Card.Title>
-//                             <Card.Text>
-//                                 <div>SubTotal :<span>{TotalPrice}</span> </div>
-//                                 <div>Discount : <span>0</span></div>
-//                                 <div>Total :<span>{TotalPrice}</span> </div>
-//                             </Card.Text>
-//                             <Button className="bg-light text-danger font-weight-bold">Checkout Now</Button>
-//                         </Card.Body>
-//                         </Card>
-//                     </div>
-//                     </div>
-//                     </>
-    
-//             </>
-//             </>
-//         )
-//     }
-
-   
-// }
-
-// export default ShoppingList 
-
-
-
- import { addToCart } from "../../../store/actions/cartaction";
+import { addToCart } from "../../../store/actions/cartaction";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 import axios from "axios";
-import { useEffect , useState } from "react";
+import { useEffect, useState } from "react";
 import { Button, Table } from "react-bootstrap";
 import Rows from "../components/Rows";
 import EmptyCart from "./Menu/EmptyCart";
@@ -172,66 +12,77 @@ import { Card } from "react-bootstrap";
 import { Link } from 'react-router-dom';
 import TotalContext from './../../../store/total-context';
 import { useContext } from 'react';
+import Loader from '../../Loader/Loader'
+import MealsContext from './../../../store/meals-context';
 
-function ShoppingList(props){
+function ShoppingList(props) {
+    const [loading, setLoading] = useState(false);
+    useEffect(() => {
+        setLoading(true)
+        setTimeout(() => {
+            setLoading(false)
+        }, 1500);
+    }, [])
 
-    const ctx = useContext(TotalContext)
+
+    const ctx = useContext(TotalContext);
+    const mealsCtx = useContext(MealsContext);
 
     let total = 0;
 
     const dispatch = useDispatch()
 
-    const [Menu,setMenu] = useState([])
+    const [Menu, setMenu] = useState([])
 
-    let quantity=0;
+    let quantity = 0;
 
     const handleQuantity = (event) => {
         const value = event.target.value;
 
-        if(value < 0)
-            return ;
-        else{this.quantity = value}
+        if (value < 0)
+            return;
+        else { this.quantity = value }
         //console.log(state.quantity)
     }
+    const { user: currentUser } = useSelector((state) => state.auth);
 
 
 
 
 
-const FavMen= useSelector((state)=>{return state.cartreducer.menu})
-let TotalPrice = 0;
-     let qty ;
+    const FavMen = useSelector((state) => { return state.cartreducer.menu })
+    let TotalPrice = 0;
+    let qty;
 
-    const filterMenu = Menu.filter((m)=>{
+    const filterMenu = Menu.filter((m) => {
         return FavMen.includes(m._id)
     })
 
-    useEffect(()=>{
+    useEffect(() => {
         axios.get('http://localhost:4000/foods')
-        .then((res)=>{
-            setMenu(res.data)
-        })
-        .catch((err)=>{
-            console.log(err)
-        })
-    },[])
+            .then((res) => {
+                setMenu(res.data)
+            })
+            .catch((err) => {
+                console.log(err)
+            })
+    }, [])
 
-    const handelMenu=(id)=>{
-        if (FavMen.includes(id))
-        {
+    const handelMenu = (id) => {
+        if (FavMen.includes(id)) {
             console.log(id)
-            const index= FavMen.indexOf(id)
+            const index = FavMen.indexOf(id)
             console.log(index)
-            FavMen.splice(index,1)
+            FavMen.splice(index, 1)
             dispatch(
                 addToCart([...FavMen])
             )
-        }else{
+        } else {
             dispatch(addToCart([id, ...FavMen]))
         }
     }
 
-    let [num, setNum]= useState(1);
+    let [num, setNum] = useState(1);
     // let incNum =()=>{
     //     if(num<10)
     //     {
@@ -244,15 +95,16 @@ let TotalPrice = 0;
     //     setNum(num - 1);
     //     }
     // }
-    let handleChange = (e)=>{
-    setNum(e.target.value);
+    let handleChange = (e) => {
+        setNum(e.target.value);
     }
 
     const [meals, setMeals] = useState([]);
 
-    const onChangeInputValue = (inputValue, id) =>{
+    const onChangeInputValue = (inputValue, id, price, img, name) => {
+
         setMeals(prevMeals => {
-            return [...prevMeals, {id,inputValue}]
+            return [...prevMeals, { id, inputValue, price, img, name, totalPrice: inputValue * price }]
         })
 
         //  props.getTotalPrice = () => {
@@ -264,116 +116,134 @@ let TotalPrice = 0;
 
 
 
-    if(filterMenu==0){
-        return(<EmptyCart/>)
-    }else{
-        return(
+    if (filterMenu == 0) {
+        return (<EmptyCart />)
+    } else {
+        return (
             <>
-            <>
-             <h1 style={{color:'#47B07F'}}> Favourit Meals </h1>
+                <>
+                    <h1 style={{ color: '#47B07F' }}> Your cart </h1>
                     <>
-                    <div className="cart">
-                    <div className=" col-8" > 
-                    <Table >
-                            <thead>
-                                <tr>
-                                
-                                <th>Meal</th>
-                                <th>Name</th>
-                                <th>Price</th>
-                                <th>Quantity</th>
-                                <th>Total</th>
-                                <th>Remove</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                               {
-                                   
-                                filterMenu.map((men,index)=>{
-                                   let newMeals = meals.filter(meal => meal.id == men._id)
-                                //    console.log(newMeals );
-                                   if(newMeals.length === 0){
-                                        TotalPrice = TotalPrice +  parseInt(men.price);
-                                        ctx.totalPrice =  TotalPrice
-                                    
-                                   }else{
-                                      TotalPrice = TotalPrice + ( parseInt(men.price)  * newMeals[newMeals.length -1].inputValue );
-                                      ctx.totalPrice =  TotalPrice
-                                   }
-                                    return(
-                                    <>
-                                     <Rows img = {men.image}
-                                        name= {men.name}
-                                        price={men.price}
-                                        remove={handelMenu}
-                                        id={men._id}
-                                        onChangeInputValue={onChangeInputValue}
-                                    />
-                                    </>
-                                    
-                                //  <tr key={men._id}>
-                                //     <td className="col-3">
-                                //         <div>
-                                //         <img className="myimg" src={men.image}/>   
-                                //         </div>
-                                //     </td>  
-                                //     <td >{men.name}{index}</td>
-                                //     <td>{men.price} </td>
-                                //     <td className="count" key={men._id}>
-                                //     <input type="number" id='myinput' defaultValue={1} onChange={event => setInput(event.target.value)} />
-                                //     </td>
-                                //     <td>
-                                //         {input==null? men.price: men.price*input}
-                                //     </td>
-                                //     <td >
-                                //         <button type="button"  className="add btn btn-danger" onClick={()=>{handelMenu(men._id)}} >
-                                //             <i className="far fa-star"></i> Remove From Cart  </button>
-                                //     </td>
-                                // </tr>
+                        <div className="cart">
+                            <div className=" col-8" >
+                                <Table >
+                                    <thead>
+                                        <tr>
 
-            
-                                    )
-                                })
-                                }                           
-                            </tbody>
+                                            <th>Meal</th>
+                                            <th>Name</th>
+                                            <th>Price</th>
+                                            <th>Quantity</th>
+                                            <th>Total</th>
+                                            <th>Remove</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {
 
-                    </Table>
-                <div>
-                    { 
-                       filterMenu.map(men=>{
-                        let p = Number(men.price)
-                        total = total +p 
-                        })
-                    }
-                    <div className="panel-footer">
-                    <div className="row text-center">
-                        <div className="col-xs-11">
-                            <h4 className="text-right">TotalPrice <strong>{TotalPrice}</strong></h4>
+                                            filterMenu.map((men) => {
+                                                console.log(filterMenu)
+                                                let newMeals = meals.filter(meal => meal.id == men._id)
+                                                    // console.log(newMeals );
+                                                    
+                                                if (newMeals.length === 0) {
+                                                    TotalPrice = TotalPrice + parseInt(men.price);
+                                                    ctx.totalPrice = TotalPrice
+                                                    mealsCtx.meals = filterMenu
 
+                                                } else {
+                                                    TotalPrice = TotalPrice + (parseInt(men.price) * newMeals[newMeals.length - 1].inputValue);
+                                                    ctx.totalPrice = TotalPrice
+
+                                                     let newFilterMeals = filterMenu;
+                                                     let index = newFilterMeals.indexOf(men)
+                                                     let newMeal = {...men, totalPrice:(parseInt(men.price) * newMeals[newMeals.length - 1].inputValue)}; 
+                                                     newFilterMeals[index] = newMeal
+                                                     mealsCtx.meals = filterMenu
+                                                    
+                                                }     
+                                                return (
+                                                    <>
+                                                        <Rows img={men.image}
+                                                            name={men.name}
+                                                            price={men.price}
+                                                            remove={handelMenu}
+                                                            id={men._id}
+                                                            onChangeInputValue={onChangeInputValue}
+                                                        />
+                                                    </>
+
+                                                    //  <tr key={men._id}>
+                                                    //     <td className="col-3">
+                                                    //         <div>
+                                                    //         <img className="myimg" src={men.image}/>   
+                                                    //         </div>
+                                                    //     </td>  
+                                                    //     <td >{men.name}{index}</td>
+                                                    //     <td>{men.price} </td>
+                                                    //     <td className="count" key={men._id}>
+                                                    //     <input type="number" id='myinput' defaultValue={1} onChange={event => setInput(event.target.value)} />
+                                                    //     </td>
+                                                    //     <td>
+                                                    //         {input==null? men.price: men.price*input}
+                                                    //     </td>
+                                                    //     <td >
+                                                    //         <button type="button"  className="add btn btn-danger" onClick={()=>{handelMenu(men._id)}} >
+                                                    //             <i className="far fa-star"></i> Remove From Cart  </button>
+                                                    //     </td>
+                                                    // </tr>
+
+
+                                                )
+                                            })
+                                        }
+                                    </tbody>
+
+                                </Table>
+                                <div>
+                                    {
+                                        filterMenu.map(men => {
+                                            let p = Number(men.price)
+                                            total = total + p
+                                        })
+                                    }
+                                    <div className="panel-footer">
+                                        <div className="row text-center">
+                                            <div className="col-xs-11">
+                                                <h4 className="text-right">Total Price <strong>{TotalPrice}</strong></h4>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className=" total col-4">
+                                <Card className=" bg-dark text-white " style={{ width: '20rem' }}>
+                                    <Card.Body>
+                                        <Card.Title className=" M-2 P-2 fw-bold" style={{ fontWeight: "bolder", fontSize: "28px" }}>Total Price </Card.Title>
+                                        <Card.Text>
+                                            <div>Total :<span> {TotalPrice} </span> </div>
+                                        </Card.Text>
+                                        {currentUser ? (
+
+                                            <Link to="/checkout/cashOnDelivery" className="btn btn-primary">Checkout Now</Link>
+                                        ) : (
+                                            <Link to="/login" className="btn btn-primary"> Checkout Now</Link>
+                                        )}                        </Card.Body>
+                                </Card>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                    </div>
-                    </div>
-                    <div className=" total col-4">
-                    <Card className=" bg-dark text-white " style={{ width: '20rem' }}>
-                        <Card.Body>
-                            <Card.Title className=" M-2 P-2 fw-bold" style={{fontWeight:"bolder" , fontSize:"28px"}}>CARD TOTAL </Card.Title>
-                            <Card.Text>
-                                <div>Total :<span> {TotalPrice} </span> </div>
-                            </Card.Text>
-                            <Link to="/checkout/cashOnDelivery" className="btn btn-primary">Checkout Now</Link>                        </Card.Body>
-                        </Card>
-                    </div>
-                    </div>
                     </>
-                    
-            </>
+
+                </>
             </>
         )
     }
 
-   
+
 }
 
 export default ShoppingList
+
+
+

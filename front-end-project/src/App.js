@@ -28,6 +28,7 @@ import Profile from './Components/Profile/profile';
 import Dashboard from './Components/Admin/AdminDashboard/Dashboard';
 import CheckOut from './Components/CheckOut/Checkout'
 import TotalContext from './store/total-context';
+import MealsContext from './store/meals-context';
 
 
 function App() {
@@ -37,6 +38,7 @@ function App() {
 
       <BrowserRouter>
       {/* <Provider store={myStore}> */}
+      <MealsContext.Provider value={{ meals : []}}>
       <TotalContext.Provider value={{ totalPrice : 0}}>
         <Nav />
         <Switch>
@@ -64,6 +66,8 @@ function App() {
         <Footer/>
         {/* </Provider> */}
         </TotalContext.Provider>
+        </MealsContext.Provider>
+
       </BrowserRouter>
 
     </div>
