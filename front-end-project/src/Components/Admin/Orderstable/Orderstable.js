@@ -1,8 +1,8 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import {useParams } from "react-router-dom";
-import{GrAdd} from"react-icons/gr";
+import { useParams } from "react-router-dom";
+import { GrAdd } from "react-icons/gr";
 
 export default function OrdersTable() {
   const { id } = useParams();
@@ -16,25 +16,20 @@ export default function OrdersTable() {
       .catch((err) => {
         console.log(err);
       });
-      loadorders();
+    loadorders();
   }, [ordersDash]);
-
-  
 
   const loadorders = async () => {
     const result = await axios.get(`http://localhost:4000/orders/${id}`);
     setodersDash(result.data);
   };
 
-
-  const deleteorder= async id=>{
+  const deleteorder = async (id) => {
     await axios.delete(`http://localhost:4000/orders/${id}`);
-};
-
+  };
 
   return (
     <>
-   
       <h3 className="fs-4 mb-2 w-25">Recent orders</h3>
       <div></div>
       {/* <div className=" d-flex justify-content-end"><Link class="btn btn-warning w-25 mb-2 ms-2" to="/Meals/add">Add a order <GrAdd/> </Link></div> */}
@@ -51,20 +46,20 @@ export default function OrdersTable() {
               <th scope="col">location</th>
               <th scope="col">Created at</th>
               <th scope="col">Total price</th>
-              {/* <th scope="col">order</th> */}
+              <th scope="col">Order Name</th>
+              <th scope="col">Quantity</th>
               <th scope="col">delete</th>
 
               {/* <th scope="col">Price</th> */}
             </tr>
           </thead>
           <tbody>
-
-    
+            {console.log(ordersDash)}
             {ordersDash.map((order, i) => {
               return (
                 <>
                   <tr key={order._id}>
-                    <th scope="row"> {i+1} </th>
+                    <th scope="row"> {i + 1} </th>
                     {/* <td><img src={`${order.username}`} style={{width:'100px'}} alt="..."/></td> */}
                     <td>{order.username}</td>
                     <td>{order.email}</td>
@@ -72,31 +67,40 @@ export default function OrdersTable() {
                     <td>{order.location}</td>
                     <td>{order.createdAt}</td>
                     <td>{order.total}</td>
-                    {/* <td>{order.orders}</td> */}
+                    <td>
+                      {order.orders.map((ord, i) => {
+                        return (
+                          <div>
+                            
+                            <span> {i + 1}- </span> {ord.name}
+                            <br/>
+                          </div>
+                        );
+                      })}
+                    </td>
 
-                    {/* <td>{order.orders[1].name}</td> */}
-                       {/* {console.log(order.orders[0])} */}
-                       {/* <td><Link class="btn btn-success" to="/orders/view">view</Link></td> */}
-
-                    <td><Link class="btn btn-danger" onClick={()=>deleteorder(order._id)}>Delete</Link></td>
-
-                    {/* <td>{order.orders}</td> */}
-
-                    {/* <td>{order.orders[[1][name]]}</td> */}
-                    {/* <td>{order(Array,'orders').name}</td> */}
-                   
-                    {/* dig(data, 'level3') */}
-                    {/* <td>{order}</td> */}
-                    {/* data[1]['id'] */}
-                    {/* data['items'][1]['name'] */}
-                      {/* order.['orders'][1]['name'] */}
-
-                    {/* <td><Link class="btn btn-success" to={`/Meals/edit/${product._id}`}>Edit</Link></td> */}
-                    {/* <td><Link class="btn btn-danger" onClick={()=>deleteMeal(product._id)}>Delete</Link></td> */}
+                    <td>
+                      {order.orders.map((ord, i) => {
+                        return (
+                          <div>
+                         
+                            <span>Quan:</span> {ord.quantity ? ord.quantity: "1"}
+                            <br/> <br/> 
+                          </div>
+                        );
+                      })}
+                    </td>
+                                    <td>
+                      <Link
+                        class="btn btn-danger"
+                        onClick={() => deleteorder(order._id)}
+                      >
+                        Delete
+                      </Link>
+                    </td>
                   </tr>
                 </>
               );
-
             })}
           </tbody>
         </table>
