@@ -13,6 +13,8 @@ import { Link } from 'react-router-dom';
 import TotalContext from './../../../store/total-context';
 import { useContext } from 'react';
 import Loader from '../../Loader/Loader'
+import MealsContext from './../../../store/meals-context';
+
 
 function ShoppingList(props) {
     const [loading, setLoading] = useState(false);
@@ -25,6 +27,9 @@ function ShoppingList(props) {
 
 
     const ctx = useContext(TotalContext)
+
+    const mealsCtx = useContext(MealsContext);
+
 
     let total = 0;
 
@@ -42,6 +47,7 @@ function ShoppingList(props) {
         else { this.quantity = value }
         //console.log(state.quantity)
     }
+    
     const { user: currentUser } = useSelector((state) => state.auth);
 
 
@@ -121,6 +127,8 @@ function ShoppingList(props) {
                 <>
                     <h1 style={{ color: '#47B07F' }}> Your cart </h1>
                     <>
+
+
                         <div className="cart">
                             <div className=" col-8" >
                                 <Table >
@@ -138,16 +146,31 @@ function ShoppingList(props) {
                                     <tbody>
                                         {
 
-                                            filterMenu.map((men, index) => {
+                                            filterMenu.map((men) => {
+                                                console.log(filterMenu[1].name)
                                                 let newMeals = meals.filter(meal => meal.id == men._id)
-                                                //    console.log(newMeals );
+                                                // console.log(newMeals );
+
                                                 if (newMeals.length === 0) {
                                                     TotalPrice = TotalPrice + parseInt(men.price);
                                                     ctx.totalPrice = TotalPrice
+                                                    mealsCtx.meals = filterMenu
 
                                                 } else {
                                                     TotalPrice = TotalPrice + (parseInt(men.price) * newMeals[newMeals.length - 1].inputValue);
                                                     ctx.totalPrice = TotalPrice
+
+                                                    let newFilterMeals = filterMenu;
+                                                    let index = newFilterMeals.indexOf(men)
+                                                    //  let newMeal = {...men, totalPrice:(parseInt(men.price) * newMeals[newMeals.length - 1].inputValue)}; 
+                                                    let newMeal = { ...men, totalPrice: (parseInt(men.price) * newMeals[newMeals.length - 1].inputValue), quantity: newMeals[newMeals.length - 1].inputValue };
+
+                                                    newFilterMeals[index] = newMeal
+
+                                                    mealsCtx.meals = filterMenu
+
+
+
                                                 }
                                                 return (
                                                     <>
@@ -159,33 +182,10 @@ function ShoppingList(props) {
                                                             onChangeInputValue={onChangeInputValue}
                                                         />
                                                     </>
-
-                                                    //  <tr key={men._id}>
-                                                    //     <td className="col-3">
-                                                    //         <div>
-                                                    //         <img className="myimg" src={men.image}/>   
-                                                    //         </div>
-                                                    //     </td>  
-                                                    //     <td >{men.name}{index}</td>
-                                                    //     <td>{men.price} </td>
-                                                    //     <td className="count" key={men._id}>
-                                                    //     <input type="number" id='myinput' defaultValue={1} onChange={event => setInput(event.target.value)} />
-                                                    //     </td>
-                                                    //     <td>
-                                                    //         {input==null? men.price: men.price*input}
-                                                    //     </td>
-                                                    //     <td >
-                                                    //         <button type="button"  className="add btn btn-danger" onClick={()=>{handelMenu(men._id)}} >
-                                                    //             <i className="far fa-star"></i> Remove From Cart  </button>
-                                                    //     </td>
-                                                    // </tr>
-
-
                                                 )
                                             })
                                         }
                                     </tbody>
-
                                 </Table>
                                 <div>
                                     {
@@ -221,13 +221,10 @@ function ShoppingList(props) {
                             </div>
                         </div>
                     </>
-
                 </>
             </>
         )
     }
-
-
 }
 
 export default ShoppingList

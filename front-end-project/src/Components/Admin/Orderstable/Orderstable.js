@@ -50,7 +50,8 @@ export default function OrdersTable() {
               <th scope="col">location</th>
               <th scope="col">Created at</th>
               <th scope="col">Total price</th>
-              {/* <th scope="col">array</th> */}
+              <th scope="col">order</th>
+              <th scope="col">delete</th>
 
               {/* <th scope="col">Price</th> */}
             </tr>
@@ -70,6 +71,12 @@ export default function OrdersTable() {
                     <td>{order.location}</td>
                     <td>{order.createdAt}</td>
                     <td>{order.total}</td>
+                    {/* <td>{order.orders}</td> */}
+
+                    {/* <td>{order.orders[1].name}</td> */}
+                       {/* {console.log(order.orders[0])} */}
+                       <td><Link class="btn btn-success" to="/orders/view">view</Link></td>
+
                     <td><Link class="btn btn-danger" onClick={()=>deleteorder(order._id)}>Delete</Link></td>
 
                     {/* <td>{order.orders}</td> */}
