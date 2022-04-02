@@ -13,6 +13,7 @@ import { Link } from 'react-router-dom';
 import TotalContext from './../../../store/total-context';
 import { useContext } from 'react';
 import Loader from '../../Loader/Loader'
+import MealsContext from './../../../store/meals-context';
 
 function ShoppingList(props) {
     const [loading, setLoading] = useState(false);
@@ -24,7 +25,8 @@ function ShoppingList(props) {
     }, [])
 
 
-    const ctx = useContext(TotalContext)
+    const ctx = useContext(TotalContext);
+    const mealsCtx = useContext(MealsContext);
 
     let total = 0;
 
@@ -100,8 +102,9 @@ function ShoppingList(props) {
     const [meals, setMeals] = useState([]);
 
     const onChangeInputValue = (inputValue, id) => {
+
         setMeals(prevMeals => {
-            return [...prevMeals, { id, inputValue }]
+            return [...prevMeals, { id, inputValue}]
         })
 
         //  props.getTotalPrice = () => {
@@ -138,17 +141,26 @@ function ShoppingList(props) {
                                     <tbody>
                                         {
 
-                                            filterMenu.map((men, index) => {
+                                            filterMenu.map((men) => {
+                                                console.log(filterMenu)
                                                 let newMeals = meals.filter(meal => meal.id == men._id)
-                                                //    console.log(newMeals );
+                                                    // console.log(newMeals );
+                                                    
                                                 if (newMeals.length === 0) {
                                                     TotalPrice = TotalPrice + parseInt(men.price);
                                                     ctx.totalPrice = TotalPrice
+                                                    mealsCtx.meals = filterMenu
 
                                                 } else {
                                                     TotalPrice = TotalPrice + (parseInt(men.price) * newMeals[newMeals.length - 1].inputValue);
                                                     ctx.totalPrice = TotalPrice
-                                                }
+
+                                                     let newFilterMeals = filterMenu;
+                                                     let index = newFilterMeals.indexOf(men)
+                                                     let newMeal = {...men, totalPrice:(parseInt(men.price) * newMeals[newMeals.length - 1].inputValue), quantity: newMeals[newMeals.length - 1].inputValue }; 
+                                                     newFilterMeals[index] = newMeal
+                                                     mealsCtx.meals = filterMenu    
+                                                }     
                                                 return (
                                                     <>
                                                         <Rows img={men.image}

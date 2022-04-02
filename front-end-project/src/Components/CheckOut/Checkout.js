@@ -8,6 +8,8 @@ import { useSelector } from "react-redux";
 
 const CheckOut = () => {
 
+  let {TotalPrice} = useParams();
+
   let { TotalPrice } = useParams();
   const { user: currentUser } = useSelector((state) => state.auth);
   if (!currentUser) {
@@ -21,10 +23,10 @@ const CheckOut = () => {
 
         <div className="col-3">
           <ul className="list-unstyled payment-options ">
-            {/* <li className="mb-4 mt-2" >
+            <li className="mb-4 mt-2" >
               <Link to="/checkout/cashOnDelivery">Cash On Delivery </Link>
-            </li> */}
-            <li className="mb-4 mt-2">
+            </li>
+            <li >
               <Link to="/checkout/paypal">Pay with Paypal</Link>
             </li>
           </ul>

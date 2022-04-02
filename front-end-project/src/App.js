@@ -1,6 +1,8 @@
 import logo from "./logo.svg";
 import "./App.css";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
+
+
 // import 'bootstrap/dist/css/bootstrap.min.css';
 // import Slider from "./Components/Slider";
 import React, { useState } from 'react';
@@ -14,7 +16,7 @@ import BreakFast from './Components/Menu/pages/Menu/BreakFast';
 import Lunch from './Components/Menu/pages/Menu/Launch';
 import Dinner from './Components/Menu/pages/Menu/Dinner';
 // import myStore from './Components/Menu/store/myStore'
-import { Provider } from "react-redux";
+// import { Provider } from "react-redux";
 import ShoppingList from './Components/Menu/pages/ShoppingList'
 import MealDetails from "./Components/Menu/pages/Menu/MealDetail";
 import AllMeals from "./Components/Menu/pages/Menu/AllMeals";
@@ -23,23 +25,21 @@ import Loginpage from './Components/regisiter/loginpage';
 import NotFound from './Components/Not-Found/NotFound'
 import Profile from './Components/Profile/profile'; 
 import Dashboard from './Components/Admin/AdminDashboard/Dashboard';
-import CheckOut from './Components/CheckOut/Checkout';
-import AdminNavAndSidebar from './Components/Admin/AdminNav&Sidebar/AdminNavAndSidebar'
-import ProductsTable from "./Components/Admin/ProductsTable/ProductsTable";
-import AddMeal from "./Components/Admin/Meals/AddMeal";
-import EditMeal from "./Components/Admin/Meals/EditMeal";
-import Adduser from "./Components/Admin/Meals/Adduser";
+import CheckOut from './Components/CheckOut/Checkout'
 import TotalContext from './store/total-context';
-import UsersTable from "./Components/Admin/AdminDashboard/UsersTable/UsersTable";
-
+import MealsContext from './store/meals-context';
 function App() {
+
   return (
     <div className="App">
+
       <BrowserRouter>
       {/* <Provider store={myStore}> */}
+      <MealsContext.Provider value={{ meals : []}}>
       <TotalContext.Provider value={{ totalPrice : 0}}>
         <Nav />
         <Switch>
+          <Route exact path="/" component={Home} />
           <Route exact path="/home" component={Home} />
           <Route exact path="/" component={Home} />
           <Route  exact path="/faq" component={Faq} />
@@ -49,7 +49,6 @@ function App() {
           <Route exact path= "/Lunch"  component={Lunch} />
           <Route  exact path= "/Dinner" component={Dinner} />
           <Route  exact path= "/shoppinglist" component={ShoppingList} />
-\
           <Route exact path= "/menudetails/:id"  component={MealDetails} />
           <Route exact path ='/allMeals'  component={AllMeals}/>
           <Route exact path="/register"  component={Regisiterpage} />
@@ -68,8 +67,10 @@ function App() {
         <Footer/>
         {/* </Provider> */}
         </TotalContext.Provider>
+        </MealsContext.Provider>
 
       </BrowserRouter>
+
     </div>
   );
 }
