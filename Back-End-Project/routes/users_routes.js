@@ -12,5 +12,8 @@ const router = express.Router()
   router.get('/count-users' , userController.countUsers)
   router.get('/users-all' , userController.allUsers)
 
-  module.exports = router
+  router.delete("/users-all/:id", userController.Delete);
+  router.get("/users-all/:id", userController.findOne);
+  router.put("/users-all/:id", userController.update);
 
+  module.exports = router

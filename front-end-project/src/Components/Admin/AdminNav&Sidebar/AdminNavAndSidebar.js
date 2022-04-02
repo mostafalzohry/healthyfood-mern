@@ -2,6 +2,7 @@ import { React, useEffect , useRef, useState } from "react";
 import { Route , Link } from 'react-router-dom';
 import UsersTable from "../AdminDashboard/UsersTable/UsersTable";
 import ProductsTable from "../ProductsTable/ProductsTable";
+import OrdersTable from "../Orderstable/Orderstable"
 
 export default function AdminNavAndSidebar() {
     const toggleRef = useRef();
@@ -44,6 +45,14 @@ export default function AdminNavAndSidebar() {
             >
               <i className="fas fa-solid fa-user me-2" />
               Users
+            </Link>
+
+            <Link
+              to="/adminnavandside/orders"
+              className="list-group-item list-group-item-action bg-transparent second-text fw-bold"
+            >
+              <i className="fas fa-solid fa-user me-2" />
+              orders
             </Link>
 {/* 
             <Link
@@ -139,7 +148,7 @@ export default function AdminNavAndSidebar() {
             <div className="row my-5">
             <Route  path="/adminnavandside/products" component={ProductsTable} />
             <Route  path="/adminnavandside/users" component={UsersTable} />
-
+            <Route  path="/adminnavandside/orders" component={OrdersTable} />
                         {/* <ProductsTable  /> */}
                         {/* <UsersTable users={usersDash} /> */}
 

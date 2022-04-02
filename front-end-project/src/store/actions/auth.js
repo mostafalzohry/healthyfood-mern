@@ -1,6 +1,6 @@
 import AuthService from "../../network/authService";
-export const register = (username, email, password) => (dispatch) => {
-  return AuthService.register(username, email, password).then(
+export const register = (username, email, password , isAdmin) => (dispatch) => {
+  return AuthService.register(username, email, password , isAdmin).then(
     (response) => {
       dispatch({
         type: "REGISTER_SUCCESS",

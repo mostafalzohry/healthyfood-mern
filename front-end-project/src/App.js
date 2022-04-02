@@ -28,14 +28,18 @@ import AdminNavAndSidebar from './Components/Admin/AdminNav&Sidebar/AdminNavAndS
 import ProductsTable from "./Components/Admin/ProductsTable/ProductsTable";
 import AddMeal from "./Components/Admin/Meals/AddMeal";
 import EditMeal from "./Components/Admin/Meals/EditMeal";
+import Adduser from "./Components/Admin/Meals/Adduser";
 import TotalContext from './store/total-context';
-
+import MealsContext from './store/meals-context';
+import UsersTable from "./Components/Admin/AdminDashboard/UsersTable/UsersTable";
+import Vieworder from "./Components/Admin/Orderstable/Vieworder";
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
       {/* <Provider store={myStore}> */}
+      <MealsContext.Provider value={{ meals : []}}>
       <TotalContext.Provider value={{ totalPrice : 0}}>
         <Nav />
         <Switch>
@@ -48,7 +52,7 @@ function App() {
           <Route exact path= "/Lunch"  component={Lunch} />
           <Route  exact path= "/Dinner" component={Dinner} />
           <Route  exact path= "/shoppinglist" component={ShoppingList} />
-       
+\
           <Route exact path= "/menudetails/:id"  component={MealDetails} />
           <Route exact path ='/allMeals'  component={AllMeals}/>
           <Route exact path="/register"  component={Regisiterpage} />
@@ -58,13 +62,17 @@ function App() {
           <Route  path="/checkout" component={CheckOut} />  
           <Route path="/adminnavandside" component={AdminNavAndSidebar} />
           <Route path="/adminnavandside/products" component={ProductsTable} />
+          <Route path="/adminnavandside/users" component={UsersTable}/>
           <Route exact path="/Meals/add" component={AddMeal}/>
           <Route exact path="/Meals/edit/:id" component={EditMeal}/>
+          <Route exact path="/users/add" component={Adduser}/>
+          <Route exact path="/orders/view" component={Vieworder}/>
           <Route  exact path="*" component={NotFound} /> 
         </Switch>
         <Footer/>
         {/* </Provider> */}
         </TotalContext.Provider>
+        </MealsContext.Provider>
 
       </BrowserRouter>
     </div>
