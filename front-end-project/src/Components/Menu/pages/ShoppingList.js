@@ -147,7 +147,7 @@ function ShoppingList(props) {
                                         {
 
                                             filterMenu.map((men) => {
-                                                console.log(filterMenu[1].name)
+                                                // console.log(filterMenu[1].name)
                                                 let newMeals = meals.filter(meal => meal.id == men._id)
                                                 // console.log(newMeals );
 

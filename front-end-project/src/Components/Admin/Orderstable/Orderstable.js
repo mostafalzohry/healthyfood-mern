@@ -35,7 +35,7 @@ export default function OrdersTable() {
   return (
     <>
    
-      {/* <h3 className="fs-4 mb-2 w-25">Recent orders</h3> */}
+      <h3 className="fs-4 mb-2 w-25">Recent orders</h3>
       {/* <div className=" d-flex justify-content-end"><Link class="btn btn-warning w-25 mb-2 ms-2" to="/Meals/add">Add a order <GrAdd/> </Link></div> */}
       <div className="col">
         <table className="table bg-white rounded shadow-sm  table-hover">
