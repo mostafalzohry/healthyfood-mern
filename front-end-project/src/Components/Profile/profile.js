@@ -18,21 +18,7 @@ const Profile = () => {
     return <Redirect to="/login" />;
   }
   return (
-    // <div className="container">
-    //   <header className="jumbotron">
-    //     <h3>
-    //       <strong>{currentUser.username}</strong> Profile
-    //     </h3>
-    //   </header>
-    //   <p>
-    //     <strong>Email:</strong> {currentUser.email}
-    //   </p>
-    //   {/* <p>
-    //     <strong>password:</strong> {currentUser.password}
-    //   </p> */}
-    //    <p>welcome  {currentUser.username} now you can make your orders  <Link to="/allmeals" class="nav-link">products</Link></p>
-    // </div>
-    <>
+      <>
     {loading ? <Loader/>:
     <div className="container-fluid mt-100">
     <div className="row">
@@ -47,7 +33,13 @@ const Profile = () => {
                     <p>
            <strong>Email:</strong> {currentUser.email}
                      </p>
-                        <h4>now you can make your orders</h4> <Link to="/allmeals" className="btn btn-success cart-btn-transform m-3" data-abc="true">continue shopping</Link>
+                     {currentUser.isAdmin !== "true" ? (
+                       <>
+<h4> now you can make your orders </h4>
+<Link to="/allmeals" className="btn btn-success cart-btn-transform m-3" data-abc="true">continue shopping</Link>  </>
+) : (
+<Link to="/admin" className="btn btn-success"> Go to Dashboard</Link>
+)}    
                     </div>
                 </div>
             </div>

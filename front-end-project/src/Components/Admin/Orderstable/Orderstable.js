@@ -36,6 +36,7 @@ export default function OrdersTable() {
     <>
    
       <h3 className="fs-4 mb-2 w-25">Recent orders</h3>
+      <div></div>
       {/* <div className=" d-flex justify-content-end"><Link class="btn btn-warning w-25 mb-2 ms-2" to="/Meals/add">Add a order <GrAdd/> </Link></div> */}
       <div className="col">
         <table className="table bg-white rounded shadow-sm  table-hover">
@@ -50,7 +51,7 @@ export default function OrdersTable() {
               <th scope="col">location</th>
               <th scope="col">Created at</th>
               <th scope="col">Total price</th>
-              <th scope="col">order</th>
+              {/* <th scope="col">order</th> */}
               <th scope="col">delete</th>
 
               {/* <th scope="col">Price</th> */}
@@ -75,7 +76,7 @@ export default function OrdersTable() {
 
                     {/* <td>{order.orders[1].name}</td> */}
                        {/* {console.log(order.orders[0])} */}
-                       <td><Link class="btn btn-success" to="/orders/view">view</Link></td>
+                       {/* <td><Link class="btn btn-success" to="/orders/view">view</Link></td> */}
 
                     <td><Link class="btn btn-danger" onClick={()=>deleteorder(order._id)}>Delete</Link></td>
 

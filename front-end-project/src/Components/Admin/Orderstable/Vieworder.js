@@ -19,7 +19,7 @@ export default function Vieworder() {
     loadorders();
   }, [VieworderDash]);
 
-
+// console.log(VieworderDash[0].orders.name)
 
   const loadorders = async () => {
     const result = await axios.get(`http://localhost:4000/orders/${id}`);
@@ -47,6 +47,7 @@ export default function Vieworder() {
 
             </tr>
           </thead>
+{/*           
           <tbody>
 
 
@@ -66,7 +67,7 @@ export default function Vieworder() {
               );
 
             })}
-          </tbody>
+          </tbody> */}
         </table>
       </div>
     </>
