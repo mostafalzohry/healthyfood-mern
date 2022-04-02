@@ -101,10 +101,10 @@ function ShoppingList(props) {
 
     const [meals, setMeals] = useState([]);
 
-    const onChangeInputValue = (inputValue, id, price, img, name) => {
+    const onChangeInputValue = (inputValue, id) => {
 
         setMeals(prevMeals => {
-            return [...prevMeals, { id, inputValue, price, img, name, totalPrice: inputValue * price }]
+            return [...prevMeals, { id, inputValue}]
         })
 
         //  props.getTotalPrice = () => {
@@ -157,10 +157,9 @@ function ShoppingList(props) {
 
                                                      let newFilterMeals = filterMenu;
                                                      let index = newFilterMeals.indexOf(men)
-                                                     let newMeal = {...men, totalPrice:(parseInt(men.price) * newMeals[newMeals.length - 1].inputValue)}; 
+                                                     let newMeal = {...men, totalPrice:(parseInt(men.price) * newMeals[newMeals.length - 1].inputValue), quantity: newMeals[newMeals.length - 1].inputValue }; 
                                                      newFilterMeals[index] = newMeal
-                                                     mealsCtx.meals = filterMenu
-                                                    
+                                                     mealsCtx.meals = filterMenu    
                                                 }     
                                                 return (
                                                     <>
