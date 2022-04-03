@@ -35,8 +35,8 @@ export default function AdminNavAndSidebar() {
               to="/adminnavandside/products"
               className="list-group-item list-group-item-action bg-transparent second-text fw-bold"
             >
-              <i className="fas fa-gift me-2" />
-              Products
+              <i className="fas fa-weight-hanging me-2" />
+              Meals
             </Link>
 
             <Link
@@ -51,8 +51,8 @@ export default function AdminNavAndSidebar() {
               to="/adminnavandside/orders"
               className="list-group-item list-group-item-action bg-transparent second-text fw-bold"
             >
-              <i className="fas fa-solid fa-user me-2" />
-              orders
+              <i className="fas fa-shopping-cart me-2" />
+              Orders
             </Link>
 {/* 
             <Link

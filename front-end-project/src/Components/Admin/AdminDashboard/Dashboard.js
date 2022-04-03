@@ -9,6 +9,7 @@ import OrdersTable from "../Orderstable/Orderstable"
 import Loader from '../../Loader/Loader';
 import { Redirect } from 'react-router-dom';
 import { useSelector } from "react-redux";
+
 export default function Dashboard() {
   const [loading,setLoading]=useState(false);
   useEffect(()=>{
@@ -111,8 +112,8 @@ export default function Dashboard() {
               to="/adminnavandside/products"
               className=" zzz   list-group-item list-group-item-action bg-transparent second-text fw-bold"
             >
-              <i className="fas fa-gift me-2" />
-              Products
+              <i className="fas fa-weight-hanging me-2" />
+              Meals
             </Link>
 
             <Link
@@ -128,8 +129,8 @@ export default function Dashboard() {
               to="/adminnavandside/orders"
               className="list-group-item list-group-item-action bg-transparent second-text fw-bold"
             >
-              <i className="fas fa-solid fa-user me-2" />
-              orders
+              <i className="fas fa-shopping-cart me-2" />
+              Orders
             </Link>
             {/* <Link
               to="#"
@@ -225,10 +226,10 @@ export default function Dashboard() {
                   <div>
                     <CardsDahboard
                       prod={productsDash}
-                      name={"Products"}
+                      name={"Meals"}
                       prodLogo={
                         <i
-                          className="fas fa-gift
+                          className="fas fa-weight-hanging
            fs-1 primary-text border rounded-full
             secondary-bg p-3"
                         />
@@ -263,13 +264,13 @@ export default function Dashboard() {
                   <div>
                     <CardsDahboard
                       prod={ordersDash}
-                      name={"orders"}
+                      name={"Orders"}
                       prodLogo={
                         <i
                         
                         // <FontAwesomeIcon icon="fa-solid fa-person-carry-box" />
                         // <i class="fa-solid fa-person-carry-box"></i>
-                        className="fas fa-user
+                        className="fas fa-shopping-cart
                         fs-1 primary-text border rounded-full
                           secondary-bg p-3"
                         />
@@ -288,7 +289,7 @@ export default function Dashboard() {
 
                         <ProductsTable/>
                         <UsersTable/>
-                        {/* <OrdersTable/> */}
+                        <OrdersTable />
             {/* <Route  path="/admin/products" component={ProductsTable} /> */}
 
 
@@ -314,7 +315,8 @@ export default function Dashboard() {
 // import Loader from '../../Loader/Loader';
 // import { Redirect } from 'react-router-dom';
 // import { useSelector } from "react-redux";
-// export default function Dashboard() {
+// import OrdersTable from './../Orderstable/Orderstable';
+
 //   const [loading,setLoading]=useState(false);
 //   useEffect(()=>{
 //     setLoading(true)

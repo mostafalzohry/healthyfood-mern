@@ -66,7 +66,7 @@ function App() {
           <Route exact path="/Meals/add" component={AddMeal}/>
           <Route exact path="/Meals/edit/:id" component={EditMeal}/>
           <Route exact path="/users/add" component={Adduser}/>
-          <Route exact path="/orders/view" component={Vieworder}/>
+          <Route exact path="/orders/view/:id" component={Vieworder}/>
           <Route  exact path="*" component={NotFound} /> 
         </Switch>
         <Footer/>

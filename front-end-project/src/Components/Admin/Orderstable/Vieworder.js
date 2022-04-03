@@ -5,26 +5,18 @@ import { useParams } from "react-router-dom";
 import { GrAdd } from "react-icons/gr";
 
 export default function Vieworder() {
-  const { id } = useParams();
+  const params = useParams();
   const [VieworderDash, setviewodersDash] = useState([]);
   useEffect(() => {
     axios
-      .get("http://localhost:4000/orders")
+      .get(`http://localhost:4000/orders/${params.id}`)
       .then((res) => {
-        setviewodersDash(res.data);
+        setviewodersDash(res.data.orders);
       })
       .catch((err) => {
         console.log(err);
       });
-    loadorders();
   }, [VieworderDash]);
-
-
-
-  const loadorders = async () => {
-    const result = await axios.get(`http://localhost:4000/orders/${id}`);
-    setviewodersDash(result.data);
-  };
 
 
 
@@ -42,29 +34,29 @@ export default function Vieworder() {
               <th scope="col" width={50}>
                 #
               </th>
-              <th scope="col">name</th>
-              <th scope="col">price</th>
-              <th scope="col">location</th>
+              <th scope="col">Image</th>
+              <th scope="col">Name</th>
+              <th scope="col">Price</th>
+              <th scope="col">Calories</th>
+              <th scope="col">Quantity</th>
+              <th scope="col">Total Price</th>
 
             </tr>
           </thead>
           <tbody>
 
 
-            {VieworderDash?.map((vieworder, i) => {
+            {VieworderDash.map((vieworder , i) => {
               return (
                 <>
-                  <tr key={vieworder._id}>
-
-                    <th scope="row"> {i + 1} </th>
-                    {/* <td>{vieworder.location}</td> */}
-                    {/* <td>{vieworder.orders[0]}</td> */}
-
-                    {/* <td>{vieworder.price}</td>
-                    <td>{vieworder.quantity}</td> */}
-
-
-
+                  <tr>
+                    <th scope="row"> {i+1} </th>
+                    <td><img src={`${vieworder.image}`} style={{width:'100px'}} alt="..."/></td>
+                    <td>{vieworder.name}</td>
+                    <td>{vieworder.price}</td>
+                    <td>{vieworder.category}</td>
+                    <td>{vieworder.quantity}</td>
+                    <td>{vieworder.totalPrice}</td>
                   </tr>
                 </>
               );

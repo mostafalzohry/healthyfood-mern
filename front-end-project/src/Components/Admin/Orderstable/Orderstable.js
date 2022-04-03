@@ -5,7 +5,7 @@ import {useParams } from "react-router-dom";
 import{GrAdd} from"react-icons/gr";
 
 export default function OrdersTable() {
-  const { id } = useParams();
+  // const { id } = useParams();
   const [ordersDash, setodersDash] = useState([]);
   useEffect(() => {
     axios
@@ -16,15 +16,14 @@ export default function OrdersTable() {
       .catch((err) => {
         console.log(err);
       });
-      loadorders();
   }, [ordersDash]);
 
   
 
-  const loadorders = async () => {
-    const result = await axios.get(`http://localhost:4000/orders/${id}`);
-    setodersDash(result.data);
-  };
+  // const loadorders = async () => {
+  //   const result = await axios.get(`http://localhost:4000/orders/${id}`);
+  //   setodersDash(result.data);
+  // };
 
 
   const deleteorder= async id=>{
@@ -35,7 +34,7 @@ export default function OrdersTable() {
   return (
     <>
    
-      {/* <h3 className="fs-4 mb-2 w-25">Recent orders</h3> */}
+      <h3 className="my-3">Recent Orders</h3>
       {/* <div className=" d-flex justify-content-end"><Link class="btn btn-warning w-25 mb-2 ms-2" to="/Meals/add">Add a order <GrAdd/> </Link></div> */}
       <div className="col">
         <table className="table bg-white rounded shadow-sm  table-hover">
@@ -75,7 +74,7 @@ export default function OrdersTable() {
 
                     {/* <td>{order.orders[1].name}</td> */}
                        {/* {console.log(order.orders[0])} */}
-                       <td><Link class="btn btn-success" to="/orders/view">view</Link></td>
+                       <td><Link class="btn btn-success" key={order.id} to={`/orders/view/${order._id}`}>view</Link></td>
 
                     <td><Link class="btn btn-danger" onClick={()=>deleteorder(order._id)}>Delete</Link></td>
 
